@@ -1,0 +1,9 @@
+TO ADD A NEW ATTRIBUTE TO THE USERS TABLE :
+To add enroll_no column to the users table, following are the steps i followed.
+
+1. In database/migrations find the migration you want to change or create a new migration using schem builder.
+2. Add the new column name and property in up function using Schema::Create function eg. $table->string('enroll_no')->unique();
+3. Now open a terminal at the root directory of the application and execute php artisan migrate:rollback then execute php artisan migrate.
+4. Go to Registrar.php and add the column details there too.
+5. Now go to User.php and change the fillable array to ['name','enroll_no', 'email', 'password'];
+6. Now you have a new column in your table.
