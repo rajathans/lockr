@@ -4,6 +4,12 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+@font-face {
+        font-family: myfont;
+        src: url('/barrio/Barrio-Regular.otf');
+}
+
 body {
   margin: 0;
 }

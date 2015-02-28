@@ -1,9 +1,13 @@
 <html>
 	<head>
 		<style>
+			@font-face {
+				font-family: myfont;
+				src: url('/barrio/Barrio-Regular.otf');
+			}
 			a {
 				margin: 0;
-				color: crimson;
+				color: salmon;
 				text-decoration: overline;
 			}
 			body {
@@ -29,16 +33,18 @@
 
 			.title {
 				font-size: 96px;
-				font-family: "Trebuchet MS", Helvetica, sans-serif;
-				background-color: crimson;
+				font-family: myfont;
+				background-color: DarkSlateGray;
+				width: 400px;
 				color: white;
 			}
 
 			.quote {
 				font-size: 24px;
-				color: teal;
+				color: DarkSlateGray;
 				margin-bottom: 10px;
-				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				font-family: myfont;
+				font-weight: bold;
 				text-align: center;
 			}
 
