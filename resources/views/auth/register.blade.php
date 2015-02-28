@@ -36,6 +36,13 @@
 						</div>
 
 						<div class="form-group">
+							<label class="col-md-4 control-label">Age</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="age" placeholder="" value="{{ old('age') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
 								<input type="email" class="form-control" name="email" placeholder="brucewayne@batmail.com" value="{{ old('email') }}">

@@ -22,7 +22,8 @@ class PagesController extends Controller {
 		$name = Auth::user()->name;
 		$email = Auth::user()->email;
 		$enrollno = Auth::user()->enroll_no;
-		return view('pages.profile')->with('name',$name)->with('email',$email)->with('enroll_no',$enrollno);
+		$age = Auth::user()->age;
+		return view('pages.profile')->with('name',$name)->with('email',$email)->with('enroll_no',$enrollno)->with('age',$age);
 	}
 
 	public function help() {
