@@ -5,6 +5,7 @@ Route::get('/home', 'PagesController@home');
 Route::get('/','WelcomeController@welcome');
 Route::get('/profile','PagesController@profile');
 Route::get('/help','PagesController@help');
+Route::get('/privacy', 'PagesController@privacy');
 
 //Notices
 Route::resource('notices','NoticesController');

@@ -31,5 +31,9 @@ class PagesController extends Controller {
 	public function help() {
 		return view('pages.help');
 	}
+
+	public function privacy() {
+		return view('pages.privacy');
+	}
 	
 }
