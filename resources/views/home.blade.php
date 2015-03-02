@@ -34,10 +34,14 @@
       		 	<tr><td>{{ $user->name }} </td></tr>
       		 	<br>
              	<tr><td>{{ $user->enroll_no }}</td></tr>
+              <br>
+              <tr><td>{{ $user->course }}</td></tr>
+              <br>
+              <tr><td>{{ $user->majors }}</td></tr>
              	<br>
-             	<tr><td>{{ $user->password }}</td></tr>
-             	<br>
-             	<tr><td>{{ $user->email }}</td></tr>	
+              <tr><td>{{ $user->email }}</td></tr>
+              <br>
+             	<tr><td>{{ $user->password }}</td></tr>             		
       		 @endforeach
       	</div>
   

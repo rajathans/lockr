@@ -36,6 +36,20 @@
 						</div>
 
 						<div class="form-group">
+							<label class="col-md-4 control-label">Course</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="course" placeholder="eg. B Tech" value="{{ old('course') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Majors</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="majors" placeholder="eg. IT/CSE/ECE" value="{{ old('majors') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">Age</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="age" placeholder="" value="{{ old('age') }}">
