@@ -41,7 +41,7 @@
              	<br>
               <tr><td>{{ $user->email }}</td></tr>
               <br>
-             	<tr><td>{{ $user->password }}</td></tr>             		
+             	<tr><td>{{ $user->password }} (encrypted)</td></tr>             		
       		 @endforeach
       	</div>
   

@@ -32,6 +32,10 @@ class PagesController extends Controller {
 		return view('pages.help');
 	}
 
+	public function about() {
+		return view('pages.about');
+	}
+
 	public function privacy() {
 		return view('pages.privacy');
 	}
