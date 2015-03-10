@@ -14,21 +14,32 @@
     <div class="container">
     <div class="row">
   		<div class="col-md-3">
-      		<h3><i class="glyphicon glyphicon-briefcase"></i> Toolbox</h3>
+      		<h3><i class="glyphicon glyphicon-briefcase"></i> Functions</h3>
             <hr>
             
             <ul class="nav nav-stacked">
-              <li><a href="javascript:;"><i class="glyphicon glyphicon-cloud-upload"></i>Upload</a></li>
-              <li><a href="javascript:;"><i class="glyphicon glyphicon-cloud-download"></i>Download</a></li>
-              <li><a href="javascript:;"><i class="glyphicon glyphicon-link"></i>Generate Link</a></li>
-              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok-sign"></i>e-Sign</a></li>
+              <button id="uploadButton" class="btn btn-primary">Upload</button>
+              <button id="downloadButton" class="btn btn-primary">Download</button>
             </ul>
             
             <hr>
         
       	</div><!--span 3 ends here -->
+
+        <script type="text/javascript">
+
+        document.getElementById("uploadButton").onclick = function() {
+          document.getElementById("fileViewArea").innerHTML = "<input type='text' class='form-control' name='title' placeholder='Enter title of the file' value='{{ old('title') }}'>";
+          document.getElementById("fileViewArea").innerHTML += "<input type = 'text' class='form-control' name='description' placeholder = 'Describe the file' value = '{{ old('description') }}>'";
+        }
+
+        document.getElementById("downloadButton").onclick = function() {
+          alert("You clicked the download button");
+        }
+
+        </script>
       
-      	<div class="col-md-9">
+      	<div class="col-md-9" id="fileViewArea">
       		 <h3><i class="glyphicon glyphicon-dashboard"></i> Dashboard</h3>  
       		 @foreach($users as $user)
       		 	<tr><td>{{ $user->name }} </td></tr>
