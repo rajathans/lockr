@@ -8,7 +8,7 @@
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
-							<strong>Whoops!</strong> Please enter all the details as it would allow faster search times.<br><br>
+							<strong>Whoops!</strong> Please enter data in all the required fields.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -31,13 +31,6 @@
 							<label class="col-md-4 control-label">Description</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="description" placeholder="Brief description of the file's contents" value="{{ old('description') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Tags</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="tags" placeholder="eg. #marksheet" value="{{ old('tags') }}">
 							</div>
 						</div>
 

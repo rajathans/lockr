@@ -22,7 +22,7 @@
 						<li><a href="/auth/register">Register</a></li>
 					@else
 						<li><a href="/upload">Upload</a></li>
-						<li><a href="/download">Download</a></li>
+						<!--<li><a href="/download">Download</a></li>-->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; background-color: DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
