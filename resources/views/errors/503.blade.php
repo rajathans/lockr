@@ -26,15 +26,18 @@
 			}
 
 			.title {
-				font-size: 72px;
-				margin-bottom: 40px;
+				font-size: 45px;
+				font-family:"Trebuchet MS", Helvetica, sans-serif;
+				background-color: DarkSlateGray;
+				width: 400px;
+				color: white;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Be right back.</div>
+				<div class="title">In development.</div>
 			</div>
 		</div>
 	</body>

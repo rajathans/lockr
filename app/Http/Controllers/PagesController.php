@@ -13,10 +13,10 @@ class PagesController extends Controller {
 		$this->middleware('auth');
 	}
 
-	public function home() {
+	/**public function home() {
 		$users = User::all();
 		return view('home')->with('users',$users);
-	}
+	}**/
 
 	public function profile() {
 		$name = Auth::user()->name;
@@ -33,11 +33,11 @@ class PagesController extends Controller {
 	}
 
 	public function about() {
-		return view('pages.about');
+		return view('errors.503');
 	}
 
 	public function privacy() {
-		return view('pages.privacy');
+		return view('errors.503');
 	}
 	
 }
