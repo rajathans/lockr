@@ -21,31 +21,39 @@ class FileEntryController extends Controller {
 
 public function __construct() {
 		$this->middleware('auth');
-}
+	}
 
 public function index()	{
 
 	$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
-	$entries = Fileentry::where('permissions', $currentUser); // use currentUser in the SQL where clause
+	$entries = Fileentry::where('permissions','=',$currentUser); // use currentUser in the SQL where clause
 	return view('home',compact(
 		'currentUser',
 		'entries'
-		)
-	);
-}
+	));
+	}
  
 public function add() {
  
 	$file = Request::file('filefield');
+	$currentUser = Auth::user()->enroll_no;
 	$extension = $file->getClientOriginalExtension();
 	Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
 	$entry = new Fileentry();
 	$entry->mime = $file->getClientMimeType();
 	$entry->original_filename = $file->getClientOriginalName();
 	$entry->filename = $file->getFilename().'.'.$extension;
-	 
+	$entry->permissions = $currentUser;
 	$entry->save();
 	 
-	return redirect('fileentry');
-}
+	return redirect('home');
+	}
+
+public function get($filename){
+	
+		$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
+		$file = Storage::disk('local')->get($entry->filename);
+ 
+		return (new Response($file, 200))->header('Content-Type', $entry->mime);
+	}
 }

@@ -18,7 +18,7 @@ class CreateFileentriesTable extends Migration {
 			$table->string('filename');
 			$table->string('mime');
 			$table->string('original_filename');
-			$table->string('permissions')->unique();
+			$table->string('permissions');
 			$table->timestamps();
 		});
 	}
