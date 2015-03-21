@@ -3,6 +3,9 @@
 use App\Http\Controllers\Controller;
 use App\Fileentry;
 use Request;
+use Auth;
+use App\User;
+use App\Http\Requests;
  
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -15,10 +18,20 @@ class FileEntryController extends Controller {
 *
 * @return Response
 */
+
+public function __construct() {
+		$this->middleware('auth');
+}
+
 public function index()	{
 
-	$entries = Fileentry::all();
-	return view('home')->with('entries',$entries);
+	$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
+	$entries = Fileentry::where('permissions', $currentUser); // use currentUser in the SQL where clause
+	return view('home',compact(
+		'currentUser',
+		'entries'
+		)
+	);
 }
  
 public function add() {

@@ -9,7 +9,8 @@ class Fileentry extends Model {
 	protected $fillable = [
 		'filename',
 		'mime',
-		'original_filename'
+		'original_filename',
+		'permissions'
 	];
 
 }

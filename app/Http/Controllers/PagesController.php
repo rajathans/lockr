@@ -4,6 +4,9 @@ use Auth;
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Input;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Http\Request;
 
@@ -25,11 +28,24 @@ class PagesController extends Controller {
 		$course = Auth::user()->course;
 		$majors = Auth::user()->majors;
 		$age = Auth::user()->age;
-		return view('pages.profile')->with('name',$name)->with('email',$email)->with('enroll_no',$enrollno)->with('course',$course)->with('majors',$majors)->with('age',$age);
+		return view('pages.profile',compact(
+			'id',
+			'name',
+			'email',
+			'enrollno',
+			'course',
+			'majors',
+			'age'			
+			)
+		);
 	}
 
 	public function help() {
 		return view('pages.help');
+	}
+
+	public function upload() {
+		
 	}
 
 	public function about() {
