@@ -26,7 +26,7 @@ public function __construct() {
 public function index()	{
 
 	$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
-	$entries = Fileentry::where('permissions','=',$currentUser); // use currentUser in the SQL where clause
+	$entries = Fileentry::all()->where('permissions',$currentUser); // use currentUser in the SQL where clause, returning files with current user permissions
 	return view('home',compact(
 		'currentUser',
 		'entries'

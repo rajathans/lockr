@@ -11,7 +11,7 @@
               <form action="fileentry/add" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="file" name="filefield" class="btn btn-link">
-                <input type="submit" class="btn btn-link">
+                <input type="submit" class="btn btn-primary">
             </form>
             </ul>
             
@@ -21,14 +21,14 @@
 
         <div class="col-md-9" id="fileViewArea">
            <h3><i class="glyphicon glyphicon-dashboard"></i> Files</h3> 
-           <h6>Current user has roll number {{ $currentUser }}</h6> 
+           <h5>Current user has roll number {{ $currentUser }}</h5> 
             <table>
               @foreach ($entries as $entry)
-                <tr><td>{{ $entry->id }}</td></tr>
-                <tr><td><a href="{{ route('getentry', [$entry->filename]) }}"> {{ $entry->filename }} </a></td></tr>
-                <tr><td>{{ $entry->mime }}</td></tr>
-                <tr><td>{{ $entry->original_filename }}</td></tr>
-                <tr><td>{{ $entry->permissions }}</td></tr>
+                <tr><td>File ID :{{ $entry->id }}</td></tr>
+                <tr><td>File name :<a href="{{ route('getentry', [$entry->filename]) }}">{{ $entry->filename }} </a></td></tr>
+                <tr><td>Type :{{ $entry->mime }}</td></tr>
+                <tr><td>Original Filename :{{ $entry->original_filename }}</td></tr>
+                <tr><td>Permissions :{{ $entry->permissions }}</td></tr>
               @endforeach
           </table>
         </div>
