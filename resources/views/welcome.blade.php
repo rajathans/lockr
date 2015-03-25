@@ -30,7 +30,7 @@
 			.title {
 				font-size: 96px;
 				font-family:"Trebuchet MS", Helvetica, sans-serif;
-				background-color: crimson;
+				background-color: DarkSlateGray;
 				width: 400px;
 				color: white;
 			}

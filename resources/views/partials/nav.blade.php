@@ -7,13 +7,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="color:white; background-color: crimson; font-weight:bold;">Lockr</a>
+				<a class="navbar-brand" href="/" style="color:white; background-color: DarkSlateGray; font-weight:bold;">Lockr</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="/about">About</a></li>
-					<li><a href="#">Donate</a></li>
+					<li><a href="/donate">Donate</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -22,7 +22,7 @@
 						<li><a href="/auth/register">Register</a></li>
 					@else
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; background-color: DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; font-weight:bold;background-color: crimson;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/home">Home</a></li>
 								<li><a href="/profile">Profile</a></li>

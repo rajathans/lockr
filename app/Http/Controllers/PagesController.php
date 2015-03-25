@@ -52,6 +52,10 @@ class PagesController extends Controller {
 		return view('errors.503');
 	}
 
+	public function donate() {
+		return view('errors.503');
+	}
+
 	public function privacy() {
 		return view('errors.503');
 	}
