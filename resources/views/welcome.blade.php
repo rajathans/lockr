@@ -84,7 +84,7 @@
 	<div class="se-pre-con"></div>
 		<div class="container">
 			<div class="content">
-				<div class="title">Lockr</div>
+				<div class="title">Lock<span style="color:coral;">r</span></div>
 				<div class="quote">Store and access files securely</div>
 				<div class="enter"><a href="/home"><b>Enter application</b></a></div>
 			</div>
