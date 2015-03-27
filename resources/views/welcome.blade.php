@@ -1,10 +1,15 @@
 <html>
 	<head>
 		<style>
+			@font-face {
+				font-family: archive;
+    			src: url("fonts/archive/Archive.otf");
+			}
+
 			a {
 				margin: 0;
 				color: salmon;
-				text-decoration: overline;
+				text-decoration: none;
 			}
 			body {
 				margin: 0;
@@ -29,17 +34,17 @@
 
 			.title {
 				font-size: 96px;
-				font-family:"Trebuchet MS", Helvetica, sans-serif;
-				background-color: DarkSlateGray;
+				font-family:archive;
 				width: 400px;
-				color: white;
+				color:crimson;
 			}
 
 			.quote {
 				font-size: 24px;
-				color: DarkSlateGray;
 				margin-bottom: 10px;
+				margin-top: -20px;
 				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				color: DarkSlateGray;
 				font-weight: bold;
 				text-align: center;
 			}
@@ -62,14 +67,25 @@
 			}
 		}
 		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+		<script type="text/javascript">
+			//paste this code under head tag or in a seperate js file.
+			// Wait for window load
+			$(window).load(function() {
+				// Animate loader off screen
+				$(".se-pre-con").fadeOut("");;
+			});
+		</script>
 		<title>Lockr</title>
 	</head>
 	<body>
+	<div class="se-pre-con"></div>
 		<div class="container">
 			<div class="content">
-				<div class="title">Lockr<sup>Beta</sup></div>
+				<div class="title">Lockr</div>
 				<div class="quote">Store and access files securely</div>
-				<div class="enter"><a href="/home">Enter application</a></div>
+				<div class="enter"><a href="/home"><b>Enter application</b></a></div>
 			</div>
 		</div>		
 	</body>

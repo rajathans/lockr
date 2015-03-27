@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lockr</title>
 	<link href="/css/app.css" rel="stylesheet">
-
+	
 </head>
 <body style="padding-top:70px;">
+
 	@include('partials.nav')
 
 	<div class="container">

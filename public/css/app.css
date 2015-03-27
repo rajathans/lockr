@@ -1,4 +1,25 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+@font-face {
+        font-family: archive;
+          src: url("/fonts/archive/Archive.otf");
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(gifs/Preloader_3.gif) center no-repeat #fff;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
