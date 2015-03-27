@@ -17,6 +17,7 @@
 				width: 100%;
 				height: 100%;
 				color: #B0BEC5;
+				background-color: white;
 				display: table;
 				font-weight: 100;
 			}
@@ -36,7 +37,7 @@
 				font-size: 96px;
 				font-family:archive;
 				width: 400px;
-				color:crimson;
+				color:DarkSlateGray;
 			}
 
 			.quote {

@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="font-family: archive; color:crimson; font-weight:bold;">Lockr</a>
+				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lockr</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,7 +28,7 @@
         					<button type="submit" class="btn btn-default">Search</button>
       					</form>-->
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; font-weight:bold;background-color: crimson;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; font-weight:bold;background-color: DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/home">Home</a></li>
 								<li><a href="/profile">Profile</a></li>
