@@ -6,2307 +6,426 @@
         font-family: archive;
           src: url("/fonts/archive/Archive.otf");
       }
+
+      * {
+  margin:auto;
+  padding:0;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
 body {
-	background: white;
-  margin: 10px;
-  text-align: center;
-  font-size: 0;
+  background: white;
 }
-div {
+
+.superman {
+  width: 200px;
+  height: 150px;
   position: relative;
-  display: inline-block;
-  width: 165px;height: 200px;
+  margin: 50px auto;
 }
-div:before, div:after {
+
+.superman:hover {
+   -webkit-animation: fly 0.4s infinite linear;
+}
+
+.head {
   position: absolute;
-  content: '';
-  display: block;
-	width: 5px;height: 5px;
+  z-index: 4;
+  width: 120px;
+  height: 110px;
+  left: calc(50% - 60px);
 }
-/* ANIMATE */
-.robot1:before {
-  -webkit-animation: before 0.3s steps(1) infinite;
-  -moz-animation: before 0.3s steps(1) infinite;
-  -o-animation: before 0.3s steps(1) infinite;
-  animation: before 0.3s steps(1) infinite;
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid 8px #000;
+  background: #FCDFD4;
+  border-radius: 30px;
+  overflow: hidden;
 }
-.robot2:before {
-  -webkit-animation: before 0.8s steps(1) infinite;
-  -moz-animation: before 0.8s steps(1) infinite;
-  -o-animation: before 0.8s steps(1) infinite;
-  animation: before 0.8s steps(1) infinite;
+
+.mantle {
+  z-index: 1;
+  position: absolute;
+  top: 6px;
+  left: -50px;
+  width: 350px;
+  height: 100px;
+  overflow: hidden;
 }
-.robot3:before {
-  -webkit-animation: before 0.4s steps(1) infinite;
-  -moz-animation: before 0.4s steps(1) infinite;
-  -o-animation: before 0.4s steps(1) infinite;
-  animation: before 0.4s steps(1) infinite;
+
+.mantle-right {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 69px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 151px 0 0;
+  border-color: #BE1622 transparent transparent transparent;
 }
-.robot4:before {
-  -webkit-animation: before 0.6s steps(1) infinite;
-  -moz-animation: before 0.6s steps(1) infinite;
-  -o-animation: before 0.6s steps(1) infinite;
-  animation: before 0.6s steps(1) infinite;
+
+.mantle-right-fix {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 46.5px;
+  right: 57px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 85px 155px 0 0;
+  border-color: #000 transparent transparent transparent;
 }
-.robot5:before {
-  -webkit-animation: before 0.5s steps(1) infinite;
-  -moz-animation: before 0.5s steps(1) infinite;
-  -o-animation: before 0.5s steps(1) infinite;
-  animation: before 0.5s steps(1) infinite;
+
+.mantle-left {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 19px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 150px 80px 0;
+  border-color: transparent #BE1622 transparent transparent;
 }
-@-webkit-keyframes before { 0% { opacity: 1; } 50% { opacity: 0; }}
-@-moz-keyframes before { 0% { opacity: 1; } 50% { opacity: 0; }}
-@-o-keyframes before { 0% { opacity: 1; } 50% { opacity: 0; }}
-@keyframes before { 0% { opacity: 1; } 50% { opacity: 0; }}
 
-.robot1:after {
-  opacity: 0;
-  -webkit-animation: after 0.3s steps(1) infinite;
-  -moz-animation: after 0.3s steps(1) infinite;
-  -o-animation: after 0.3s steps(1) infinite;
-  animation: after 0.3s steps(1) infinite;
+.mantle-left-fix {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 46px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  left: 6px;
+  border-width: 0 190px 105px 0;
+  border-color: transparent #000 transparent transparent;
 }
-.robot2:after {
-  opacity: 0;
-  -webkit-animation: after 0.8s steps(1) infinite;
-  -moz-animation: after 0.8s steps(1) infinite;
-  -o-animation: after 0.8s steps(1) infinite;
-  animation: after 0.8s steps(1) infinite;
+
+.mantle-neck {
+  content: "";
+  z-index: 3;
+  position: absolute;
+  top: 65px;
+  left: calc(50% - 26px);
+  width: 50px;
+  height: 50px;
+  background: #BE1622;
+  border-radius: 110px;
+  border: solid 4px black;
 }
-.robot3:after {
-  opacity: 0;
-  -webkit-animation: after 0.4s steps(1) infinite;
-  -moz-animation: after 0.4s steps(1) infinite;
-  -o-animation: after 0.4s steps(1) infinite;
-  animation: after 0.4s steps(1) infinite;
+
+.body {
+  z-index: 2;
+  position: absolute;
+  background: #1D71B8;
+  width: 110px;
+  height: 100px;
+  left: calc(50% - 55px);
+  border-radius: 30px;
+  border: solid 5px black;
+  top: 20px;
 }
-.robot4:after {
-  opacity: 0;
-  -webkit-animation: after 0.6s steps(1) infinite;
-  -moz-animation: after 0.6s steps(1) infinite;
-  -o-animation: after 0.6s steps(1) infinite;
-  animation: after 0.6s steps(1) infinite;
+
+.feet {
+  z-index: 2;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  top: 115px;
+  left: calc(50% - 15px);
 }
-.robot5:after {
-  opacity: 0;
-  -webkit-animation: after 0.5s steps(1) infinite;
-  -moz-animation: after 0.5s steps(1) infinite;
-  -o-animation: after 0.5s steps(1) infinite;
-  animation: after 0.5s steps(1) infinite;
+
+.feet:before {
+  content: "";
+  position: absolute;
+  background: #BE1622;
+  height: 5px;
+  width: 10px;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 10px;
+  border: solid 4px black;
 }
-@-webkit-keyframes after { 0% { opacity: 0; } 50% { opacity: 1; } }
-@-moz-keyframes after { 0% { opacity: 0; } 50% { opacity: 1; } }
-@-o-keyframess after { 0% { opacity: 0; } 50% { opacity: 1; } }
-@keyframes after { 0% { opacity: 0; } 50% { opacity: 1; } }
 
-.robot1:before {
-  box-shadow:
-    /* antenna */
-    50px 0px 0 black,
-    55px 0px 0 black,
-    60px 0px 0 black,
-    65px 0px 0 black,
-    45px 5px 0 black,
-    70px 5px 0 black,
-    40px 10px 0 black,
-    75px 10px 0 black,
-    40px 15px 0 black,
-    75px 15px 0 black,
-    45px 20px 0 black,
-    70px 20px 0 black,
-    50px 25px 0 black,
-    55px 25px 0 black,
-    60px 25px 0 black,
-    65px 25px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
-    55px 35px 0 black,
-    60px 35px 0 black,
-    /* head */
-    30px 40px 0 black,
-    35px 40px 0 black,
-    40px 40px 0 black,
-    45px 40px 0 black,
-    50px 40px 0 black,
-    55px 40px 0 black,
-    60px 40px 0 black,
-    65px 40px 0 black,
-    70px 40px 0 black,
-    75px 40px 0 black,
-    80px 40px 0 black,
-    85px 40px 0 black, 
-    25px 45px 0 black,
-    90px 45px 0 black,
-    25px 50px 0 black,
-    90px 50px 0 black,
-    20px 55px 0 black,
-    25px 55px 0 black,
-    40px 55px 0 black,
-    75px 55px 0 black,
-    90px 55px 0 black,
-    95px 55px 0 black,
-    15px 60px 0 black,
-    20px 60px 0 black,
-    25px 60px 0 black,
-    40px 60px 0 black,
-    75px 60px 0 black,
-    90px 60px 0 black,
-    95px 60px 0 black,
-    100px 60px 0 black,
-    20px 65px 0 black,
-    25px 65px 0 black,
-    40px 65px 0 black,
-    75px 65px 0 black,
-    90px 65px 0 black,
-    95px 65px 0 black,
-    25px 70px 0 black,
-    90px 70px 0 black,
-    25px 75px 0 black,
-    90px 75px 0 black,
-    30px 80px 0 black,
-    35px 80px 0 black,
-    40px 80px 0 black,
-    45px 80px 0 black,
-    50px 80px 0 black,
-    55px 80px 0 black,
-    60px 80px 0 black,
-    65px 80px 0 black,
-    70px 80px 0 black,
-    75px 80px 0 black,
-    80px 80px 0 black,
-    85px 80px 0 black,
-    /* neck */
-    45px 85px 0 black,
-    50px 85px 0 black,
-    55px 85px 0 black,
-    60px 85px 0 black,
-    65px 85px 0 black,
-    70px 85px 0 black,
-    /* torso */
-    35px 90px 0 black,
-    40px 90px 0 black,
-    45px 90px 0 black,
-    50px 90px 0 black,
-    55px 90px 0 black,
-    60px 90px 0 black,
-    65px 90px 0 black,
-    70px 90px 0 black, 
-    75px 90px 0 black,  
-    80px 90px 0 black,  
-    30px 95px 0 black,
-    30px 100px 0 black,
-    30px 105px 0 black,
-    30px 110px 0 black,
-    30px 115px 0 black,
-    30px 120px 0 black,
-    30px 125px 0 black,
-    30px 130px 0 black,
-    30px 135px 0 black,
-    30px 140px 0 black,
-    85px 95px 0 black,
-    85px 100px 0 black,
-    85px 105px 0 black,
-    85px 110px 0 black,
-    85px 115px 0 black,
-    85px 120px 0 black,
-    85px 125px 0 black,
-    85px 130px 0 black,
-    85px 135px 0 black,
-    85px 140px 0 black,
-    35px 145px 0 black,
-    40px 145px 0 black,
-    45px 145px 0 black,
-    50px 145px 0 black,
-    55px 145px 0 black,
-    60px 145px 0 black,
-    65px 145px 0 black,
-    70px 145px 0 black, 
-    75px 145px 0 black,  
-    80px 145px 0 black,
-    55px 100px 0 black,
-    60px 100px 0 black,
-    45px 105px 0 black,
-    50px 105px 0 black,
-    45px 110px 0 black,
-    50px 110px 0 black,
-    65px 105px 0 black,
-    70px 105px 0 black,
-    65px 110px 0 black,
-    70px 110px 0 black,    
-    40px 115px 0 black,
-    40px 120px 0 black,
-    55px 115px 0 black,
-    55px 120px 0 black,
-    60px 115px 0 black,
-    60px 120px 0 black,
-    75px 115px 0 black,
-    75px 120px 0 black,    
-    45px 125px 0 black,
-    50px 125px 0 black,
-    45px 130px 0 black,
-    50px 130px 0 black,
-    65px 125px 0 black,
-    70px 125px 0 black,
-    65px 130px 0 black,
-    70px 130px 0 black, 
-    55px 135px 0 black,
-    60px 135px 0 black,
-    /* left arm */
-    15px 100px 0 black,
-    20px 100px 0 black,
-    25px 100px 0 black,
-    10px 105px 0 black,
-    15px 105px 0 black,
-    20px 105px 0 black,
-    25px 105px 0 black,
-    5px 110px 0 black,
-    10px 110px 0 black,
-    15px 110px 0 black,
-    5px 115px 0 black,
-    10px 115px 0 black,
-    15px 115px 0 black,
-    5px 120px 0 black,
-    10px 120px 0 black,
-    15px 120px 0 black,
-    10px 125px 0 black,
-    5px 130px 0 black,
-    10px 130px 0 black,
-    15px 130px 0 black,
-    0px 135px 0 black,
-    5px 135px 0 black,
-    15px 135px 0 black,
-    20px 135px 0 black,
-    5px 140px 0 black,
-    15px 140px 0 black,
-    /* right arm */
-    90px 100px 0 black,
-    95px 100px 0 black,
-    100px 100px 0 black,
-    90px 105px 0 black,
-    95px 105px 0 black,
-    100px 105px 0 black,
-    105px 105px 0 black,
-    100px 110px 0 black,
-    105px 110px 0 black,
-    110px 110px 0 black,
-    100px 115px 0 black,
-    105px 115px 0 black,
-    110px 115px 0 black,
-    100px 120px 0 black,
-    105px 120px 0 black,
-    110px 120px 0 black, 
-    105px 125px 0 black,
-    100px 130px 0 black,
-    105px 130px 0 black,
-    110px 130px 0 black,
-    95px 135px 0 black,
-    100px 135px 0 black,
-    110px 135px 0 black,
-    115px 135px 0 black,
-    100px 140px 0 black,
-    110px 140px 0 black,
-    /* left leg */
-    45px 150px 0 black,
-    50px 150px 0 black,
-    45px 155px 0 black,
-    50px 155px 0 black,
-    45px 160px 0 black,
-    50px 160px 0 black,
-    45px 165px 0 black,
-    50px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    /* right leg */
-    65px 150px 0 black,
-    70px 150px 0 black,
-    65px 155px 0 black,
-    70px 155px 0 black,
-    65px 160px 0 black,
-    70px 160px 0 black,
-    65px 165px 0 black,
-    70px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black
+.feet:after {
+  content: "";
+  position: absolute;
+  background: #BE1622;
+  height: 5px;
+  width: 10px;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 10px 0;
+  border: solid 4px black;
 }
-.robot1:after {
-  box-shadow:
-    /* antenna */
-    /*fixed antenna
-    50px 5px 0 black,
-    55px 5px 0 black,
-    60px 5px 0 black,
-    65px 5px 0 black,
-    45px 10px 0 black,
-    70px 10px 0 black,  
-    40px 15px 0 black,
-    75px 15px 0 black,
-    40px 20px 0 black,
-    75px 20px 0 black,
-    45px 25px 0 black,
-    70px 25px 0 black,
-    50px 30px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
-    65px 30px 0 black,
-    */
-    /*animated antenna*/
-    55px 5px 0 black,
-    60px 5px 0 black,
 
-    55px 10px 0 black,
-    60px 10px 0 black,  
-    55px 15px 0 black,
-    60px 15px 0 black,
-    55px 20px 0 black,
-    60px 20px 0 black,
-    55px 25px 0 black,
-    60px 25px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
- 
-    55px 35px 0 black,
-    60px 35px 0 black,
-    55px 40px 0 black,
-    60px 40px 0 black,
-    
-    /* head */
-    30px 45px 0 black,
-    35px 45px 0 black,
-    40px 45px 0 black,
-    45px 45px 0 black,
-    50px 45px 0 black,
-    55px 45px 0 black,
-    60px 45px 0 black,
-    65px 45px 0 black,
-    70px 45px 0 black,
-    75px 45px 0 black,
-    80px 45px 0 black,
-    85px 45px 0 black,
-    25px 50px 0 black,
-    90px 50px 0 black,
-    25px 55px 0 black,
-    90px 55px 0 black,
-    20px 60px 0 black,
-    25px 60px 0 black,
-    40px 60px 0 black,
-    75px 60px 0 black,
-    90px 60px 0 black,
-    95px 60px 0 black,
-    15px 65px 0 black,
-    20px 65px 0 black,
-    25px 65px 0 black,
-    40px 65px 0 black,
-    75px 65px 0 black,
-    90px 65px 0 black,
-    95px 65px 0 black,
-    100px 65px 0 black,
-    20px 70px 0 black,
-    25px 70px 0 black,
-    40px 70px 0 black,
-    75px 70px 0 black,
-    90px 70px 0 black,
-    95px 70px 0 black,
-    25px 75px 0 black,
-    90px 75px 0 black,
-    25px 80px 0 black,
-    90px 80px 0 black,
-    30px 85px 0 black,
-    35px 85px 0 black,
-    40px 85px 0 black,
-    45px 85px 0 black,
-    50px 85px 0 black,
-    55px 85px 0 black,
-    60px 85px 0 black,
-    65px 85px 0 black,
-    70px 85px 0 black,
-    75px 85px 0 black,
-    80px 85px 0 black,
-    85px 85px 0 black,
-    /* neck */
-    45px 90px 0 black,
-    50px 90px 0 black,
-    55px 90px 0 black,
-    60px 90px 0 black,
-    65px 90px 0 black,
-    70px 90px 0 black,
-    /* torso */
-    35px 95px 0 black,
-    40px 95px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black, 
-    75px 95px 0 black,  
-    80px 95px 0 black,
-    30px 100px 0 black,
-    30px 105px 0 black,
-    30px 110px 0 black,
-    30px 115px 0 black,
-    30px 120px 0 black,
-    30px 125px 0 black,
-    30px 130px 0 black,
-    30px 135px 0 black,
-    30px 140px 0 black,
-    30px 145px 0 black,
-    85px 100px 0 black,
-    85px 105px 0 black,
-    85px 110px 0 black,
-    85px 115px 0 black,
-    85px 120px 0 black,
-    85px 125px 0 black,
-    85px 130px 0 black,
-    85px 135px 0 black,
-    85px 140px 0 black,
-    85px 145px 0 black,
-    35px 150px 0 black,
-    40px 150px 0 black,
-    45px 150px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    70px 150px 0 black, 
-    75px 150px 0 black,  
-    80px 150px 0 black,
-    55px 105px 0 black,
-    60px 105px 0 black,
-    45px 110px 0 black,
-    50px 110px 0 black,
-    45px 115px 0 black,
-    50px 115px 0 black,
-    65px 110px 0 black,
-    70px 110px 0 black,
-    65px 115px 0 black,
-    70px 115px 0 black,    
-    40px 120px 0 black,
-    40px 125px 0 black,
-    55px 120px 0 black,
-    55px 125px 0 black,
-    60px 120px 0 black,
-    60px 125px 0 black,
-    75px 120px 0 black,
-    75px 125px 0 black,
-    45px 130px 0 black,
-    50px 130px 0 black,
-    45px 135px 0 black,
-    50px 135px 0 black,
-    65px 130px 0 black,
-    70px 130px 0 black,
-    65px 135px 0 black,
-    70px 135px 0 black, 
-    55px 140px 0 black,
-    60px 140px 0 black,
-    /* left arm */
-    15px 105px 0 black,
-    20px 105px 0 black,
-    25px 105px 0 black,
-    10px 110px 0 black,
-    15px 110px 0 black,
-    20px 110px 0 black,
-    25px 110px 0 black,
-    5px 115px 0 black,
-    10px 115px 0 black,
-    15px 115px 0 black,
-    5px 120px 0 black,
-    10px 120px 0 black,
-    15px 120px 0 black,
-    5px 125px 0 black,
-    10px 125px 0 black,
-    15px 125px 0 black,
-    10px 130px 0 black,
-    5px 135px 0 black,
-    10px 135px 0 black,
-    15px 135px 0 black,
-    0px 140px 0 black,
-    5px 140px 0 black,
-    15px 140px 0 black,
-    20px 140px 0 black,
-    5px 145px 0 black,
-    15px 145px 0 black,
-    /* right arm */
-    90px 105px 0 black,
-    95px 105px 0 black,
-    100px 105px 0 black,
-    90px 110px 0 black,
-    95px 110px 0 black,
-    100px 110px 0 black,
-    105px 110px 0 black,
-    100px 115px 0 black,
-    105px 115px 0 black,
-    110px 115px 0 black,
-    100px 120px 0 black,
-    105px 120px 0 black,
-    110px 120px 0 black,
-    100px 125px 0 black,
-    105px 125px 0 black,
-    110px 125px 0 black,
-    105px 130px 0 black,
-    100px 135px 0 black,
-    105px 135px 0 black,
-    110px 135px 0 black,
-    95px 140px 0 black,
-    100px 140px 0 black,
-    110px 140px 0 black,
-    115px 140px 0 black,
-    100px 145px 0 black,
-    110px 145px 0 black,
-    /* left leg */
-    45px 155px 0 black,
-    50px 155px 0 black,
-    40px 160px 0 black,
-    45px 160px 0 black,
-    45px 165px 0 black,
-    50px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    /* right leg */
-    65px 155px 0 black,
-    70px 155px 0 black,
-    70px 160px 0 black,
-    75px 160px 0 black,
-    65px 165px 0 black,
-    70px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black
+.hand-right {
+  position: absolute;
+  background: #FCDFD4;
+  left: 42px;
+  top: 96px;
+  z-index: 4;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  border: solid 3px black;
 }
-.robot2:before {
-  box-shadow:
-    /* antenna */
-    55px 45px 0 black,
-    55px 50px 0 black,
-    55px 55px 0 black,
-    /*head*/
-    45px 60px 0 black,
-    50px 60px 0 black,
-    55px 60px 0 black,
-    60px 60px 0 black,
-    65px 60px 0 black,
-    70px 60px 0 black,
-    
-    40px 65px 0 black,
-    40px 70px 0 black,
-    40px 75px 0 black,
-    40px 80px 0 black,
-    40px 85px 0 black,
 
-    75px 65px 0 black,
-    75px 70px 0 black,
-    75px 75px 0 black,
-    75px 80px 0 black,
-    75px 85px 0 black,
-    /* eyes */
-    50px 75px 0 black,
-    50px 80px 0 black,
-    60px 75px 0 black,
-    60px 80px 0 black,
-    /*neck*/
-    35px 90px 0 black,
-    40px 90px 0 black,
-    45px 90px 0 black,
-    50px 90px 0 black,
-    55px 90px 0 black,
-    60px 90px 0 black,
-    65px 90px 0 black,
-    70px 90px 0 black,
-    75px 90px 0 black,
-    80px 90px 0 black,
-    /*torso*/
-    30px 95px 0 black,
-    35px 95px 0 black,
-    40px 95px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    75px 95px 0 black,
-    80px 95px 0 black,
-    85px 95px 0 black,
-    
-    30px 115px 0 black,
-    30px 120px 0 black,
-    85px 115px 0 black,
-    85px 120px 0 black,
-    
-    35px 125px 0 black,
-    35px 130px 0 black,
-    80px 125px 0 black,
-    80px 130px 0 black,
-
-    40px 135px 0 black,
-    40px 140px 0 black,
-    40px 145px 0 black,
-    75px 135px 0 black,
-    75px 140px 0 black,
-    75px 145px 0 black,
-
-    45px 145px 0 black,
-    70px 145px 0 black,
-
-    45px 150px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    70px 150px 0 black,
-    /* torso deco*/
-    35px 105px 0 black,
-    45px 105px 0 black,
-    55px 105px 0 black,
-    65px 105px 0 black,
-    75px 105px 0 black,
-    
-    40px 110px 0 black,
-    50px 110px 0 black,
-    60px 110px 0 black,
-    70px 110px 0 black,
-
-    45px 115px 0 black,
-    55px 115px 0 black,
-    65px 115px 0 black,
-
-    50px 120px 0 black,
-    60px 120px 0 black,
-    /*left leg*/
-    45px 155px 0 black,
-    45px 160px 0 black,
-    45px 165px 0 black,
-    
-    30px 170px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    /*right leg*/
-    75px 155px 0 black,
-    70px 160px 0 black,
-
-    65px 165px 0 black,
-    70px 165px 0 black,
-    75px 165px 0 black,
-    80px 165px 0 black,
-    85px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    85px 170px 0 black,
-    /*left arm*/
-    10px 60px 0 black,
-    15px 60px 0 black,
-    20px 60px 0 black,
-    
-    5px 65px 0 black,
-    10px 65px 0 black,
-    15px 65px 0 black,
-    25px 65px 0 black,
-
-    5px 70px 0 black,
-    10px 70px 0 black,
-    15px 70px 0 black,
-    20px 70px 0 black,
-    25px 70px 0 black,
-
-    10px 75px 0 black,
-    15px 75px 0 black,
-    20px 75px 0 black,
-    
-    5px 80px 0 black,
-    5px 85px 0 black,
-    5px 90px 0 black,
-    5px 95px 0 black,
-    5px 100px 0 black,
-    5px 105px 0 black,
-    5px 110px 0 black,
-
-    25px 80px 0 black,
-    25px 85px 0 black,
-    25px 90px 0 black,
-    25px 95px 0 black,
-    25px 100px 0 black,
-    25px 105px 0 black,
-    25px 110px 0 black,
-    
-    10px 115px 0 black,
-    15px 115px 0 black,
-    20px 115px 0 black,
-    
-    10px 95px 0 black,
-    10px 105px 0 black,
-    /*right arm*/
-    95px 95px 0 black,
-    100px 95px 0 black,
-    105px 95px 0 black,
-    
-    105px 105px 0 black,
-    105px 115px 0 black,
-
-    90px 100px 0 black,
-    90px 105px 0 black,
-    90px 110px 0 black,
-    90px 115px 0 black,
-    90px 120px 0 black,
-    90px 125px 0 black,
-    90px 130px 0 black,
-
-    110px 100px 0 black,
-    110px 105px 0 black,
-    110px 110px 0 black,
-    110px 115px 0 black,
-    110px 120px 0 black,
-    110px 125px 0 black,
-    110px 130px 0 black,
-
-    95px 135px 0 black,
-    100px 135px 0 black,
-    105px 135px 0 black,
-
-    90px 140px 0 black,
-    95px 140px 0 black,
-    100px 140px 0 black,
-    110px 140px 0 black,
-
-    90px 145px 0 black,
-    95px 145px 0 black,
-    100px 145px 0 black,
-    105px 145px 0 black,
-    110px 145px 0 black,
-
-    95px 150px 0 black,
-    100px 150px 0 black,
-    105px 150px 0 black
+.hand-right:before,
+.hand-right:after {
+  content: "";
+  position: absolute;
+  background: #FCDFD4;
+  top: -3px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: solid 3px black;
 }
-.robot2:after {
-  box-shadow:
-    /* antenna */
-    60px 45px 0 black,
-    60px 50px 0 black,
-    60px 55px 0 black,
-    /*head*/
-    45px 60px 0 black,
-    50px 60px 0 black,
-    55px 60px 0 black,
-    60px 60px 0 black,
-    65px 60px 0 black,
-    70px 60px 0 black,
-    
-    40px 65px 0 black,
-    40px 70px 0 black,
-    40px 75px 0 black,
-    40px 80px 0 black,
-    40px 85px 0 black,
 
-    75px 65px 0 black,
-    75px 70px 0 black,
-    75px 75px 0 black,
-    75px 80px 0 black,
-    75px 85px 0 black,
-    /* eyes */
-    55px 75px 0 black,
-    55px 80px 0 black,
-    65px 75px 0 black,
-    65px 80px 0 black,
-    /*neck*/
-    35px 90px 0 black,
-    40px 90px 0 black,
-    45px 90px 0 black,
-    50px 90px 0 black,
-    55px 90px 0 black,
-    60px 90px 0 black,
-    65px 90px 0 black,
-    70px 90px 0 black,
-    75px 90px 0 black,
-    80px 90px 0 black,
-    /*torso*/
-    30px 95px 0 black,
-    35px 95px 0 black,
-    40px 95px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    75px 95px 0 black,
-    80px 95px 0 black,
-    85px 95px 0 black,
-    
-    30px 115px 0 black,
-    30px 120px 0 black,
-    85px 115px 0 black,
-    85px 120px 0 black,
-    
-    35px 125px 0 black,
-    35px 130px 0 black,
-    80px 125px 0 black,
-    80px 130px 0 black,
-
-    40px 135px 0 black,
-    40px 140px 0 black,
-    40px 145px 0 black,
-    75px 135px 0 black,
-    75px 140px 0 black,
-    75px 145px 0 black,
-
-    45px 145px 0 black,
-    70px 145px 0 black,
-
-    45px 150px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    70px 150px 0 black,
-    /* torso deco*/
-    40px 105px 0 black,
-    50px 105px 0 black,
-    60px 105px 0 black,
-    70px 105px 0 black,
-    80px 105px 0 black,
-    
-    45px 110px 0 black,
-    55px 110px 0 black,
-    65px 110px 0 black,
-    75px 110px 0 black,
-
-    50px 115px 0 black,
-    60px 115px 0 black,
-    70px 115px 0 black,
-
-    55px 120px 0 black,
-    65px 120px 0 black,
-    /*left leg*/
-    40px 155px 0 black,
-    45px 160px 0 black,
-    
-    30px 165px 0 black,
-    35px 165px 0 black,
-    40px 165px 0 black,
-    45px 165px 0 black,
-    50px 165px 0 black,
-    30px 170px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    /*right leg*/
-    70px 155px 0 black,
-    70px 160px 0 black,
-    70px 165px 0 black,
-
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    85px 170px 0 black,
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black,
-    /*left arm*/
-    
-    10px 95px 0 black,
-    15px 95px 0 black,
-    20px 95px 0 black,
-    
-    10px 105px 0 black,
-    10px 115px 0 black,
-
-    5px 100px 0 black,
-    5px 105px 0 black,
-    5px 110px 0 black,
-    5px 115px 0 black,
-    5px 120px 0 black,
-    5px 125px 0 black,
-    5px 130px 0 black,
-
-    25px 100px 0 black,
-    25px 105px 0 black,
-    25px 110px 0 black,
-    25px 115px 0 black,
-    25px 120px 0 black,
-    25px 125px 0 black,
-    25px 130px 0 black,
-
-    10px 135px 0 black,
-    15px 135px 0 black,
-    20px 135px 0 black,
-
-    5px 140px 0 black,
-    10px 140px 0 black,
-    15px 140px 0 black,
-    25px 140px 0 black,
-
-    5px 145px 0 black,
-    10px 145px 0 black,
-    15px 145px 0 black,
-    20px 145px 0 black,
-    25px 145px 0 black,
-
-    10px 150px 0 black,
-    15px 150px 0 black,
-    20px 150px 0 black,
-    /*right arm*/
-    95px 60px 0 black,
-    100px 60px 0 black,
-    105px 60px 0 black,
-    
-    90px 65px 0 black,
-    95px 65px 0 black,
-    100px 65px 0 black,
-    110px 65px 0 black,
-
-    90px 70px 0 black,
-    95px 70px 0 black,
-    100px 70px 0 black,
-    105px 70px 0 black,
-    110px 70px 0 black,
-
-    95px 75px 0 black,
-    100px 75px 0 black,
-    105px 75px 0 black,
-    
-    90px 80px 0 black,
-    90px 85px 0 black,
-    90px 90px 0 black,
-    90px 95px 0 black,
-    90px 100px 0 black,
-    90px 105px 0 black,
-    90px 110px 0 black,
-
-    110px 80px 0 black,
-    110px 85px 0 black,
-    110px 90px 0 black,
-    110px 95px 0 black,
-    110px 100px 0 black,
-    110px 105px 0 black,
-    110px 110px 0 black,
-    
-    95px 115px 0 black,
-    100px 115px 0 black,
-    105px 115px 0 black,
-    
-    105px 95px 0 black,
-    105px 105px 0 black
+.hand-right:before {
+  left: -10px;
 }
-.robot3:before {
-  box-shadow:
-    /* antenna */
-    55px 15px 0 black,
-    60px 15px 0 black,
-    35px 20px 0 black,
-    40px 20px 0 black,
-    45px 20px 0 black,
-    50px 20px 0 black,
-    55px 20px 0 black,
-    60px 20px 0 black,
-    65px 20px 0 black,
-    70px 20px 0 black,
-    75px 20px 0 black,
-    80px 20px 0 black,
-    55px 25px 0 black,
-    60px 25px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
-    55px 35px 0 black,
-    60px 35px 0 black,
-    /* head */
-    45px 40px 0 black,
-    50px 40px 0 black,
-    55px 40px 0 black,
-    60px 40px 0 black,
-    65px 40px 0 black,
-    70px 40px 0 black,
-    40px 45px 0 black,
-    40px 50px 0 black,
-    40px 55px 0 black,
-    40px 60px 0 black,
-    40px 65px 0 black,
-    75px 45px 0 black,
-    75px 50px 0 black,
-    75px 55px 0 black,
-    75px 60px 0 black,
-    75px 65px 0 black,
-    /*eyes*/
-    50px 50px 0 black,
-    50px 55px 0 black,
-    65px 50px 0 black,
-    65px 55px 0 black,
-    /*body*/
-    30px 70px 0 black,
-    35px 70px 0 black,
-    40px 70px 0 black,
-    45px 70px 0 black,
-    50px 70px 0 black,
-    55px 70px 0 black,
-    60px 70px 0 black,
-    65px 70px 0 black,
-    70px 70px 0 black,
-    75px 70px 0 black,
-    80px 70px 0 black,
-    85px 70px 0 black,
-    25px 75px 0 black,
-    25px 80px 0 black,
-    25px 85px 0 black,
-    25px 90px 0 black,
-    25px 95px 0 black,
-    25px 100px 0 black,
-    25px 105px 0 black,
-    25px 110px 0 black,
-    25px 115px 0 black,
-    25px 120px 0 black,
-    25px 125px 0 black,
-    90px 75px 0 black,
-    90px 80px 0 black,
-    90px 85px 0 black,
-    90px 90px 0 black,
-    90px 95px 0 black,
-    90px 100px 0 black,
-    90px 105px 0 black,
-    90px 110px 0 black,
-    90px 115px 0 black,
-    90px 120px 0 black,
-    90px 125px 0 black,
-    30px 130px 0 black,
-    35px 130px 0 black,
-    40px 130px 0 black,
-    45px 130px 0 black,
-    50px 130px 0 black,
-    55px 130px 0 black,
-    60px 130px 0 black,
-    65px 130px 0 black,
-    70px 130px 0 black,
-    75px 130px 0 black,
-    80px 130px 0 black,
-    85px 130px 0 black,
-    35px 135px 0 black,
-    80px 135px 0 black,
-    35px 140px 0 black,
-    40px 140px 0 black,
-    45px 140px 0 black,
-    50px 140px 0 black,
-    55px 140px 0 black,
-    60px 140px 0 black,
-    65px 140px 0 black,
-    70px 140px 0 black,
-    75px 140px 0 black,
-    80px 140px 0 black,   
-    40px 145px 0 black,
-    45px 145px 0 black,
-    70px 145px 0 black,
-    75px 145px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    55px 155px 0 black,
-    60px 155px 0 black,
-    55px 160px 0 black,
-    60px 160px 0 black,
-    55px 165px 0 black,
-    60px 165px 0 black,
-    55px 170px 0 black,
-    60px 170px 0 black,
-    /*left f*/
-    25px 155px 0 black,
-    30px 155px 0 black,
-    35px 155px 0 black,
-    40px 155px 0 black,
-    20px 160px 0 black,
-    25px 160px 0 black,
-    30px 160px 0 black,
-    35px 160px 0 black,
-    40px 160px 0 black,
-    45px 160px 0 black,
-    20px 165px 0 black,
-    45px 165px 0 black,
-    50px 165px 0 black,
-    20px 170px 0 black,
-    25px 170px 0 black,
-    30px 170px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,    
-    25px 175px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    /*right f*/
-    75px 155px 0 black,
-    80px 155px 0 black,
-    85px 155px 0 black,
-    90px 155px 0 black,
-    70px 160px 0 black,
-    75px 160px 0 black,
-    80px 160px 0 black,
-    85px 160px 0 black,
-    90px 160px 0 black,
-    95px 160px 0 black,
-    70px 165px 0 black,
-    95px 165px 0 black,
-    65px 165px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    85px 170px 0 black,
-    90px 170px 0 black,
-    95px 170px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black,
-    90px 175px 0 black,
-    /*left arm*/
-    20px 80px 0 black,
-    20px 85px 0 black,
-    20px 90px 0 black,
-    5px 75px 0 black,
-    10px 75px 0 black,
-    15px 75px 0 black,
-    0px 80px 0 black,
-    0px 85px 0 black,
-    5px 85px 0 black,
-    0px 90px 0 black,
-    0px 95px 0 black,
-    0px 100px 0 black,
-    0px 105px 0 black,
-    0px 110px 0 black,
-    0px 115px 0 black,
-    15px 80px 0 black,
-    15px 85px 0 black,
-    15px 90px 0 black,
-    15px 95px 0 black,
-    15px 100px 0 black,
-    15px 105px 0 black,
-    15px 110px 0 black,
-    15px 115px 0 black,
-    5px 120px 0 black,
-    10px 120px 0 black,
-    0px 125px 0 black,
-    5px 125px 0 black,
-    10px 125px 0 black,
-    15px 125px 0 black,
-    0px 130px 0 black,
-    15px 130px 0 black,
-    /*right arm*/
-    95px 80px 0 black,
-    95px 85px 0 black,
-    95px 90px 0 black,
-    100px 75px 0 black,
-    105px 75px 0 black,
-    110px 75px 0 black,
-    115px 80px 0 black,
-    115px 85px 0 black,
-    110px 85px 0 black,
-    115px 90px 0 black,
-    115px 95px 0 black,
-    115px 100px 0 black,
-    115px 105px 0 black,
-    115px 110px 0 black,
-    115px 115px 0 black,
-    100px 80px 0 black,
-    100px 85px 0 black,
-    100px 90px 0 black,
-    100px 95px 0 black,
-    100px 100px 0 black,
-    100px 105px 0 black,
-    100px 110px 0 black,
-    100px 115px 0 black,  
-    105px 120px 0 black,
-    110px 120px 0 black,
-    100px 125px 0 black,
-    105px 125px 0 black,
-    110px 125px 0 black,
-    115px 125px 0 black,
-    100px 130px 0 black,
-    115px 130px 0 black,
-    /*led*/
-    70px 80px 0 black,
-    75px 80px 0 black,
-    65px 85px 0 black,
-    70px 85px 0 black,
-    75px 85px 0 black,
-    80px 85px 0 black,
-    65px 90px 0 black,
-    70px 90px 0 black,
-    75px 90px 0 black,
-    80px 90px 0 black,
-    70px 95px 0 black,
-    75px 95px 0 black
+
+.hand-right:after {
+  left: -18px;
 }
-.robot3:after {
-  box-shadow:
-    /* antenna */
-    55px 20px 0 black,
-    60px 20px 0 black,
-    40px 20px 0 black,
-    45px 20px 0 black,
-    70px 20px 0 black,
-    75px 20px 0 black,
-    35px 25px 0 black,
-    50px 25px 0 black,
-    55px 25px 0 black,
-    60px 25px 0 black,
-    65px 25px 0 black,
-    80px 25px 0 black,
-    40px 30px 0 black,
-    45px 30px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
-    70px 30px 0 black,
-    75px 30px 0 black,
-    55px 35px 0 black,
-    60px 35px 0 black,
-    55px 40px 0 black,
-    60px 40px 0 black,
-    /* head */
-    45px 45px 0 black,
-    50px 45px 0 black,
-    55px 45px 0 black,
-    60px 45px 0 black,
-    65px 45px 0 black,
-    70px 45px 0 black,
-    40px 50px 0 black,
-    40px 55px 0 black,
-    40px 60px 0 black,
-    40px 65px 0 black,
-    40px 70px 0 black,
-    75px 50px 0 black,
-    75px 55px 0 black,
-    75px 60px 0 black,
-    75px 65px 0 black,
-    75px 70px 0 black,
-    /*eyes*/
-    50px 55px 0 black,
-    50px 60px 0 black,
-    65px 55px 0 black,
-    65px 60px 0 black,
-    /*body*/
-    30px 75px 0 black,
-    35px 75px 0 black,
-    40px 75px 0 black,
-    45px 75px 0 black,
-    50px 75px 0 black,
-    55px 75px 0 black,
-    60px 75px 0 black,
-    65px 75px 0 black,
-    70px 75px 0 black,
-    75px 75px 0 black,
-    80px 75px 0 black,
-    85px 75px 0 black,
-    25px 80px 0 black,
-    25px 85px 0 black,
-    25px 90px 0 black,
-    25px 95px 0 black,
-    25px 100px 0 black,
-    25px 105px 0 black,
-    25px 110px 0 black,
-    25px 115px 0 black,
-    25px 120px 0 black,
-    25px 125px 0 black,
-    25px 130px 0 black,
-    90px 80px 0 black,
-    90px 85px 0 black,
-    90px 90px 0 black,
-    90px 95px 0 black,
-    90px 100px 0 black,
-    90px 105px 0 black,
-    90px 110px 0 black,
-    90px 115px 0 black,
-    90px 120px 0 black,
-    90px 125px 0 black,
-    90px 130px 0 black,
-    30px 135px 0 black,
-    35px 135px 0 black,
-    40px 135px 0 black,
-    45px 135px 0 black,
-    50px 135px 0 black,
-    55px 135px 0 black,
-    60px 135px 0 black,
-    65px 135px 0 black,
-    70px 135px 0 black,
-    75px 135px 0 black,
-    80px 135px 0 black,
-    85px 135px 0 black,
-    35px 135px 0 black,
-    80px 135px 0 black,
-    35px 140px 0 black,
-    40px 140px 0 black,
-    45px 140px 0 black,
-    50px 140px 0 black,
-    55px 140px 0 black,
-    60px 140px 0 black,
-    65px 140px 0 black,
-    70px 140px 0 black,
-    75px 140px 0 black,
-    80px 140px 0 black,   
-    40px 145px 0 black,
-    45px 145px 0 black,
-    70px 145px 0 black,
-    75px 145px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    55px 155px 0 black,
-    60px 155px 0 black,
-    55px 160px 0 black,
-    60px 160px 0 black,
-    55px 165px 0 black,
-    60px 165px 0 black,
-    55px 170px 0 black,
-    60px 170px 0 black,
-    /*left f*/
-    25px 155px 0 black,
-    30px 155px 0 black,
-    35px 155px 0 black,
-    40px 155px 0 black,
-    20px 160px 0 black,
-    45px 160px 0 black,
-    20px 165px 0 black,
-    25px 165px 0 black,
-    30px 165px 0 black,
-    35px 165px 0 black,
-    40px 165px 0 black,
-    45px 165px 0 black,
-    50px 165px 0 black,
-    20px 170px 0 black,
-    45px 170px 0 black,    
-    25px 175px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    /*right f*/
-    75px 155px 0 black,
-    80px 155px 0 black,
-    85px 155px 0 black,
-    90px 155px 0 black,
-    70px 160px 0 black,
-    95px 160px 0 black,
-    65px 165px 0 black,
-    70px 165px 0 black,
-    75px 165px 0 black,
-    80px 165px 0 black,
-    85px 165px 0 black,
-    90px 165px 0 black,
-    95px 165px 0 black,
-    70px 170px 0 black,
-    95px 170px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black,
-    90px 175px 0 black,
-    /*left arm*/
-    20px 85px 0 black,
-    20px 90px 0 black,
-    20px 95px 0 black,
-    5px 80px 0 black,
-    10px 80px 0 black,
-    15px 80px 0 black,
-    0px 85px 0 black,
-    0px 90px 0 black,5px 90px 0 black,
-    0px 95px 0 black,
-    0px 100px 0 black,
-    0px 105px 0 black,
-    0px 110px 0 black,
-    0px 115px 0 black,
-    0px 120px 0 black,
-    15px 85px 0 black,
-    15px 90px 0 black,
-    15px 95px 0 black,
-    15px 100px 0 black,
-    15px 105px 0 black,
-    15px 110px 0 black,
-    15px 115px 0 black,
-    15px 120px 0 black,   
-    5px 125px 0 black,
-    10px 125px 0 black,
-    0px 130px 0 black,
-    5px 130px 0 black,
-    10px 130px 0 black,
-    15px 130px 0 black,
-    5px 135px 0 black,
-    10px 135px 0 black,  
-    /*right arm*/
-    95px 85px 0 black,
-    95px 90px 0 black,
-    95px 95px 0 black,
-    100px 80px 0 black,
-    105px 80px 0 black,
-    110px 80px 0 black,
-    115px 85px 0 black,
-    115px 90px 0 black,110px 90px 0 black,
-    115px 95px 0 black,
-    115px 100px 0 black,
-    115px 105px 0 black,
-    115px 110px 0 black,
-    115px 115px 0 black,
-    115px 120px 0 black,
-    100px 85px 0 black,
-    100px 90px 0 black,
-    100px 95px 0 black,
-    100px 100px 0 black,
-    100px 105px 0 black,
-    100px 110px 0 black,
-    100px 115px 0 black,
-    100px 120px 0 black, 
-    105px 125px 0 black,
-    110px 125px 0 black,
-    100px 130px 0 black,
-    105px 130px 0 black,
-    110px 130px 0 black,
-    115px 130px 0 black,
-    105px 135px 0 black,
-    110px 135px 0 black,
-    /*led*/
-    70px 85px 0 black,
-    75px 85px 0 black,
-    65px 90px 0 black,
-    80px 90px 0 black,
-    65px 95px 0 black,
-    80px 95px 0 black,
-    70px 100px 0 black,
-    75px 100px 0 black
+
+.hand-left {
+  position: absolute;
+  background: #FCDFD4;
+  right: 24px;
+  top: 96px;
+  z-index: 4;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  border: solid 3px black;
 }
-.robot4:before {
-	box-shadow:
-    /* antenna */
-    40px 20px 0 black,
-    45px 20px 0 black,
-    40px 25px 0 black,
-    45px 25px 0 black,
-    50px 30px 0 black,
-    50px 35px 0 black,
-    50px 40px 0 black,
-    50px 45px 0 black,
-    70px 20px 0 black,
-    75px 20px 0 black,
-    70px 25px 0 black,
-    75px 25px 0 black,
-    65px 30px 0 black,
-    65px 35px 0 black,
-    65px 40px 0 black,
-    65px 45px 0 black,
-    /*head*/
-    40px 50px 0 black,
-    45px 50px 0 black,
-    50px 50px 0 black,
-    55px 50px 0 black,
-    60px 50px 0 black,
-    65px 50px 0 black,
-    70px 50px 0 black,
-    75px 50px 0 black,   
-    35px 55px 0 black,
-    35px 60px 0 black,
-    35px 65px 0 black,
-    35px 70px 0 black,
-    35px 75px 0 black,
-    35px 80px 0 black,
-    80px 55px 0 black,
-    80px 60px 0 black,
-    80px 65px 0 black,
-    80px 70px 0 black,
-    80px 75px 0 black,
-    80px 80px 0 black,
-    40px 85px 0 black,
-    45px 85px 0 black,
-    50px 85px 0 black,
-    55px 85px 0 black,
-    60px 85px 0 black,
-    65px 85px 0 black,
-    70px 85px 0 black,
-    75px 85px 0 black,
-    30px 60px 0 black,
-    30px 65px 0 black,
-    30px 70px 0 black,
-    25px 65px 0 black,
-    85px 60px 0 black,
-    85px 65px 0 black,
-    85px 70px 0 black,
-    90px 65px 0 black,
-    /*eyes*/
-    50px 60px 0 black,
-    50px 65px 0 black,
-    50px 70px 0 black,
-    65px 60px 0 black,
-    65px 65px 0 black,
-    65px 70px 0 black,
-    /*neck*/
-    50px 90px 0 black,
-    65px 90px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    /*body*/
-    40px 100px 0 black,
-    45px 100px 0 black,
-    50px 100px 0 black,
-    55px 100px 0 black,
-    60px 100px 0 black,
-    65px 100px 0 black,
-    70px 100px 0 black,
-    75px 100px 0 black,
-    35px 105px 0 black,
-    35px 110px 0 black,
-    35px 115px 0 black,
-    35px 120px 0 black,
-    35px 125px 0 black,
-    35px 130px 0 black,
-    35px 135px 0 black,
-    35px 140px 0 black,
-    35px 145px 0 black,
-    80px 105px 0 black,
-    80px 110px 0 black,
-    80px 115px 0 black,
-    80px 120px 0 black,
-    80px 125px 0 black,
-    80px 130px 0 black,
-    80px 135px 0 black,
-    80px 140px 0 black,
-    80px 145px 0 black,
-    40px 150px 0 black,
-    45px 150px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    70px 150px 0 black,
-    75px 150px 0 black,
-    /*leds*/
-    45px 115px 0 black,
-    55px 115px 0 black,
-    65px 115px 0 black,
-    70px 115px 0 black,
-    45px 125px 0 black,
-    50px 125px 0 black,
-    65px 125px 0 black,
-    70px 125px 0 black,    
-    45px 135px 0 black,
-    50px 135px 0 black,
-    60px 135px 0 black,
-    70px 135px 0 black,
-    /*left arm*/
-    5px 105px 0 black,
-    0px 110px 0 black,
-    5px 110px 0 black,
-    10px 110px 0 black,
-    10px 115px 0 black,
-    0px 120px 0 black,
-    5px 120px 0 black,
-    10px 120px 0 black,
-    5px 125px 0 black,
-    15px 115px 0 black,    
-    20px 110px 0 black,
-    25px 110px 0 black,
-    30px 110px 0 black,
-    20px 115px 0 black,
-    25px 115px 0 black,
-    30px 115px 0 black,
-    20px 120px 0 black,
-    25px 120px 0 black,
-    30px 120px 0 black,
-    /*right arm*/
-    90px 85px 0 black,
-    100px 85px 0 black,
-    85px 90px 0 black,
-    90px 90px 0 black,
-    100px 90px 0 black,
-    105px 90px 0 black,
-    90px 95px 0 black, 
-    95px 95px 0 black,
-    100px 95px 0 black,
-    95px 100px 0 black,
-    90px 105px 0 black, 
-    95px 105px 0 black,
-    100px 105px 0 black,   
-    85px 110px 0 black,
-    90px 110px 0 black,
-    95px 110px 0 black,
-    100px 110px 0 black,
-    85px 115px 0 black,
-    90px 115px 0 black,
-    95px 115px 0 black,
-    85px 120px 0 black,
-    /*legs*/
-    50px 155px 0 black,
-    50px 160px 0 black,
-    50px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    65px 155px 0 black,
-    65px 160px 0 black,
-    65px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,   
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black
+
+.hand-left:before,
+.hand-left:after {
+  content: "";
+  position: absolute;
+  background: #FCDFD4;
+  top: -3px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: solid 3px black;
 }
-.robot4:after {
-	box-shadow:
-    /* antenna */
-    30px 25px 0 black,
-    35px 25px 0 black,
-    30px 30px 0 black,
-    35px 30px 0 black,    
-    40px 35px 0 black,
-    45px 40px 0 black,
-    50px 45px 0 black,
-    80px 25px 0 black,
-    85px 25px 0 black,
-    80px 30px 0 black,
-    85px 30px 0 black,
-    75px 35px 0 black,
-    70px 40px 0 black,
-    65px 45px 0 black,
-    40px 20px 0 black,
-    50px 20px 0 black,
-    65px 20px 0 black,
-    75px 20px 0 black,
-    45px 25px 0 black,
-    55px 25px 0 black,
-    60px 25px 0 black,
-    70px 25px 0 black,  
-    /*head*/
-    40px 50px 0 black,
-    45px 50px 0 black,
-    50px 50px 0 black,
-    55px 50px 0 black,
-    60px 50px 0 black,
-    65px 50px 0 black,
-    70px 50px 0 black,
-    75px 50px 0 black,   
-    35px 55px 0 black,
-    35px 60px 0 black,
-    35px 65px 0 black,
-    35px 70px 0 black,
-    35px 75px 0 black,
-    35px 80px 0 black,
-    80px 55px 0 black,
-    80px 60px 0 black,
-    80px 65px 0 black,
-    80px 70px 0 black,
-    80px 75px 0 black,
-    80px 80px 0 black,
-    40px 85px 0 black,
-    45px 85px 0 black,
-    50px 85px 0 black,
-    55px 85px 0 black,
-    60px 85px 0 black,
-    65px 85px 0 black,
-    70px 85px 0 black,
-    75px 85px 0 black,
-    30px 60px 0 black,
-    30px 65px 0 black,
-    30px 70px 0 black,
-    25px 65px 0 black,
-    85px 60px 0 black,
-    85px 65px 0 black,
-    85px 70px 0 black,
-    90px 65px 0 black,
-    /*eyes*/
-    50px 60px 0 black,
-    50px 65px 0 black,
-    50px 70px 0 black,
-    65px 60px 0 black,
-    65px 65px 0 black,
-    65px 70px 0 black,
-    /*neck*/
-    50px 90px 0 black,
-    65px 90px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    /*body*/
-    40px 100px 0 black,
-    45px 100px 0 black,
-    50px 100px 0 black,
-    55px 100px 0 black,
-    60px 100px 0 black,
-    65px 100px 0 black,
-    70px 100px 0 black,
-    75px 100px 0 black,
-    35px 105px 0 black,
-    35px 110px 0 black,
-    35px 115px 0 black,
-    35px 120px 0 black,
-    35px 125px 0 black,
-    35px 130px 0 black,
-    35px 135px 0 black,
-    35px 140px 0 black,
-    35px 145px 0 black,
-    80px 105px 0 black,
-    80px 110px 0 black,
-    80px 115px 0 black,
-    80px 120px 0 black,
-    80px 125px 0 black,
-    80px 130px 0 black,
-    80px 135px 0 black,
-    80px 140px 0 black,
-    80px 145px 0 black,
-    40px 150px 0 black,
-    45px 150px 0 black,
-    50px 150px 0 black,
-    55px 150px 0 black,
-    60px 150px 0 black,
-    65px 150px 0 black,
-    70px 150px 0 black,
-    75px 150px 0 black,
-    /*leds*/
-    45px 115px 0 black,
-    50px 115px 0 black,
-    60px 115px 0 black,
-    70px 115px 0 black,
-    45px 125px 0 black,
-    55px 125px 0 black,
-    60px 125px 0 black,
-    70px 125px 0 black,
-    45px 135px 0 black,
-    55px 135px 0 black,
-    65px 135px 0 black,
-    70px 135px 0 black,
-    /*left arm*/
-    15px 85px 0 black,
-    25px 85px 0 black,
-    10px 90px 0 black,
-    15px 90px 0 black,
-    25px 90px 0 black,
-    30px 90px 0 black,
-    15px 95px 0 black, 
-    20px 95px 0 black,
-    25px 95px 0 black,
-    20px 100px 0 black,
-    15px 105px 0 black, 
-    20px 105px 0 black,
-    25px 105px 0 black,
-    15px 110px 0 black,
-    20px 110px 0 black,
-    25px 110px 0 black,
-    30px 110px 0 black,
-    20px 115px 0 black,
-    25px 115px 0 black,
-    30px 115px 0 black,
-    30px 120px 0 black,
-    /*right arm*/
-    110px 105px 0 black,
-    105px 110px 0 black,
-    110px 110px 0 black,
-    115px 110px 0 black,
-    100px 115px 0 black,
-    105px 115px 0 black,
-    105px 120px 0 black,
-    110px 120px 0 black,
-    115px 120px 0 black,
-    110px 125px 0 black,
-    85px 110px 0 black,
-    90px 110px 0 black,
-    95px 110px 0 black,
-    85px 115px 0 black,
-    90px 115px 0 black,
-    95px 115px 0 black,
-    85px 120px 0 black,
-    90px 120px 0 black,
-    95px 120px 0 black,
-    /*legs*/
-    50px 155px 0 black,
-    50px 160px 0 black,
-    50px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    65px 155px 0 black,
-    65px 160px 0 black,
-    65px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,   
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black
+
+.hand-left:before {
+  left: -10px;
 }
-.robot5:before {
-  box-shadow:
-    /*head*/
-    50px 20px 0 black,
-    55px 20px 0 black,
-    60px 20px 0 black,
-    65px 20px 0 black,
-    45px 25px 0 black,
-    70px 25px 0 black,
-    40px 30px 0 black,
-    75px 30px 0 black, 
-    35px 35px 0 black,
-    50px 35px 0 black,
-    65px 35px 0 black,
-    80px 35px 0 black,
-    35px 40px 0 black,
-    80px 40px 0 black,
-    35px 45px 0 black,
-    40px 45px 0 black,
-    45px 45px 0 black,
-    50px 45px 0 black,
-    55px 45px 0 black,
-    60px 45px 0 black,
-    65px 45px 0 black,
-    70px 45px 0 black,
-    75px 45px 0 black,
-    80px 45px 0 black,
-    /*neck*/
-    55px 50px 0 black,
-    60px 50px 0 black,
-    50px 55px 0 black,
-    55px 55px 0 black,
-    60px 55px 0 black,
-    65px 55px 0 black,    
-    55px 60px 0 black,
-    60px 60px 0 black,
-    /*body*/
-    30px 65px 0 black,
-    35px 65px 0 black,
-    40px 65px 0 black,
-    45px 65px 0 black,
-    50px 65px 0 black,
-    55px 65px 0 black,
-    60px 65px 0 black,
-    65px 65px 0 black,
-    70px 65px 0 black,
-    75px 65px 0 black,
-    80px 65px 0 black,
-    85px 65px 0 black,
-    30px 70px 0 black,
-    85px 70px 0 black,
-    30px 75px 0 black,
-    85px 75px 0 black,
-    30px 80px 0 black,
-    85px 80px 0 black,
-    30px 85px 0 black,
-    85px 85px 0 black,
-    35px 90px 0 black,
-    80px 90px 0 black,
-    40px 95px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    75px 95px 0 black,
-    45px 100px 0 black,
-    70px 100px 0 black,
-    40px 105px 0 black,
-    45px 105px 0 black,
-    50px 105px 0 black,
-    55px 105px 0 black,
-    60px 105px 0 black,
-    65px 105px 0 black,
-    70px 105px 0 black,
-    75px 105px 0 black,
-    45px 110px 0 black,
-    70px 110px 0 black,
-    40px 115px 0 black,
-    45px 115px 0 black,
-    50px 115px 0 black,
-    55px 115px 0 black,
-    60px 115px 0 black,
-    65px 115px 0 black,
-    70px 115px 0 black,
-    75px 115px 0 black,
-    40px 120px 0 black,
-    75px 120px 0 black,
-    35px 125px 0 black,
-    80px 125px 0 black,
-    35px 130px 0 black,
-    80px 130px 0 black,
-    35px 135px 0 black,
-    80px 135px 0 black,
-    35px 140px 0 black,
-    40px 140px 0 black,
-    45px 140px 0 black,
-    50px 140px 0 black,
-    55px 140px 0 black,
-    60px 140px 0 black,
-    65px 140px 0 black,
-    70px 140px 0 black,
-    75px 140px 0 black,
-    80px 140px 0 black,
-    /*left leg*/
-    45px 145px 0 black,
-    45px 150px 0 black,
-    40px 155px 0 black,
-    45px 155px 0 black,
-    50px 155px 0 black,
-    45px 160px 0 black,
-    45px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    /*right leg*/
-    70px 145px 0 black,
-    70px 150px 0 black,
-    65px 155px 0 black,
-    70px 155px 0 black,
-    75px 155px 0 black,
-    70px 160px 0 black,
-    70px 165px 0 black,
-    65px 170px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    65px 175px 0 black,
-    70px 175px 0 black,
-    75px 175px 0 black,
-    80px 175px 0 black,
-    85px 175px 0 black,
-    /*shoulders*/
-    15px 65px 0 black,
-    20px 65px 0 black,
-    10px 70px 0 black,
-    20px 70px 0 black,
-    25px 70px 0 black,
-    5px 75px 0 black,
-    20px 75px 0 black,
-    25px 75px 0 black,
-    5px 80px 0 black,
-    10px 80px 0 black,
-    15px 80px 0 black,
-    20px 80px 0 black,
-    95px 65px 0 black,
-    100px 65px 0 black,
-    90px 70px 0 black,
-    95px 70px 0 black,
-    105px 70px 0 black,
-    90px 75px 0 black,
-    95px 75px 0 black,
-    110px 75px 0 black,
-    95px 80px 0 black,
-    100px 80px 0 black,
-    105px 80px 0 black,
-    110px 80px 0 black,
-    /*left arm*/
-    15px 85px 0 black,
-    10px 90px 0 black,
-    15px 90px 0 black,
-    20px 90px 0 black,
-    15px 95px 0 black,
-    10px 100px 0 black,
-    15px 100px 0 black,
-    20px 100px 0 black,
-    15px 105px 0 black,
-    10px 110px 0 black,
-    15px 110px 0 black,
-    20px 110px 0 black,
-    15px 115px 0 black,
-    10px 120px 0 black,
-    15px 120px 0 black,
-    20px 120px 0 black,
-    5px 125px 0 black,
-    10px 125px 0 black,
-    20px 125px 0 black,
-    25px 125px 0 black,
-    10px 130px 0 black,
-    20px 130px 0 black,
-    /*right arm*/
-    100px 85px 0 black,
-    95px 90px 0 black,
-    100px 90px 0 black,
-    105px 90px 0 black,
-    100px 95px 0 black,
-    95px 100px 0 black,
-    100px 100px 0 black,
-    105px 100px 0 black,
-    100px 105px 0 black,
-    95px 110px 0 black,
-    100px 110px 0 black,
-    105px 110px 0 black,
-    100px 115px 0 black,
-    95px 120px 0 black,
-    100px 120px 0 black,
-    105px 120px 0 black,
-    90px 125px 0 black,
-    95px 125px 0 black,
-    105px 125px 0 black,
-    110px 125px 0 black,
-    95px 130px 0 black,
-    105px 130px 0 black
+
+.hand-left:after {
+  left: -18px;
 }
-.robot5:after {
-  box-shadow:
-    /*head*/
-    50px 30px 0 black,
-    55px 30px 0 black,
-    60px 30px 0 black,
-    65px 30px 0 black,   
-    45px 35px 0 black,
-    70px 35px 0 black,
-    40px 40px 0 black,
-    75px 40px 0 black,
-    35px 45px 0 black,
-    50px 45px 0 black,
-    65px 45px 0 black,
-    80px 45px 0 black,
-    35px 50px 0 black,
-    80px 50px 0 black,
-    35px 55px 0 black,
-    40px 55px 0 black,
-    45px 55px 0 black,
-    50px 55px 0 black,
-    55px 55px 0 black,
-    60px 55px 0 black,
-    65px 55px 0 black,
-    70px 55px 0 black,
-    75px 55px 0 black,
-    80px 55px 0 black,
-    /*neck*/
-    50px 60px 0 black,
-    55px 60px 0 black,
-    60px 60px 0 black,
-    65px 60px 0 black,    
-    /*body*/
-    30px 65px 0 black,
-    35px 65px 0 black,
-    40px 65px 0 black,
-    45px 65px 0 black,
-    50px 65px 0 black,
-    55px 65px 0 black,
-    60px 65px 0 black,
-    65px 65px 0 black,
-    70px 65px 0 black,
-    75px 65px 0 black,
-    80px 65px 0 black,
-    85px 65px 0 black,
-    30px 70px 0 black,
-    85px 70px 0 black,
-    30px 75px 0 black,
-    85px 75px 0 black,
-    30px 80px 0 black,
-    85px 80px 0 black,
-    30px 85px 0 black,
-    85px 85px 0 black,
-    35px 90px 0 black,
-    80px 90px 0 black,
-    40px 95px 0 black,
-    45px 95px 0 black,
-    50px 95px 0 black,
-    55px 95px 0 black,
-    60px 95px 0 black,
-    65px 95px 0 black,
-    70px 95px 0 black,
-    75px 95px 0 black,
-    45px 100px 0 black,
-    70px 100px 0 black,
-    40px 105px 0 black,
-    45px 105px 0 black,
-    50px 105px 0 black,
-    55px 105px 0 black,
-    60px 105px 0 black,
-    65px 105px 0 black,
-    70px 105px 0 black,
-    75px 105px 0 black,
-    45px 110px 0 black,
-    70px 110px 0 black,
-    40px 115px 0 black,
-    45px 115px 0 black,
-    50px 115px 0 black,
-    55px 115px 0 black,
-    60px 115px 0 black,
-    65px 115px 0 black,
-    70px 115px 0 black,
-    75px 115px 0 black,
-    40px 120px 0 black,
-    75px 120px 0 black,
-    35px 125px 0 black,
-    80px 125px 0 black,
-    35px 130px 0 black,
-    80px 130px 0 black,
-    35px 135px 0 black,
-    80px 135px 0 black,
-    35px 140px 0 black,
-    40px 140px 0 black,
-    45px 140px 0 black,
-    50px 140px 0 black,
-    55px 140px 0 black,
-    60px 140px 0 black,
-    65px 140px 0 black,
-    70px 140px 0 black,
-    75px 140px 0 black,
-    80px 140px 0 black,
-    /*left leg*/
-    45px 145px 0 black,
-    45px 150px 0 black,
-    40px 155px 0 black,
-    45px 155px 0 black,
-    50px 155px 0 black,
-    45px 160px 0 black,
-    45px 165px 0 black,
-    35px 170px 0 black,
-    40px 170px 0 black,
-    45px 170px 0 black,
-    50px 170px 0 black,
-    30px 175px 0 black,
-    35px 175px 0 black,
-    40px 175px 0 black,
-    45px 175px 0 black,
-    50px 175px 0 black,
-    /*right leg*/
-    75px 145px 0 black,
-    80px 150px 0 black,
-    75px 155px 0 black,
-    75px 160px 0 black,
-    70px 165px 0 black,
-    75px 165px 0 black,
-    80px 165px 0 black,
-    85px 165px 0 black,
-    70px 170px 0 black,
-    75px 170px 0 black,
-    80px 170px 0 black,
-    85px 170px 0 black,
-    90px 170px 0 black,
-    /*shoulders*/
-    15px 65px 0 black,
-    20px 65px 0 black,
-    10px 70px 0 black,
-    20px 70px 0 black,
-    25px 70px 0 black,
-    5px 75px 0 black,
-    20px 75px 0 black,
-    25px 75px 0 black,
-    5px 80px 0 black,
-    10px 80px 0 black,
-    15px 80px 0 black,
-    20px 80px 0 black,
-    95px 65px 0 black,
-    100px 65px 0 black,
-    90px 70px 0 black,
-    95px 70px 0 black,
-    105px 70px 0 black,
-    90px 75px 0 black,
-    95px 75px 0 black,
-    110px 75px 0 black,
-    95px 80px 0 black,
-    100px 80px 0 black,
-    105px 80px 0 black,
-    110px 80px 0 black,
-    /*left arm*/
-    15px 85px 0 black,
-    10px 90px 0 black,
-    15px 90px 0 black,
-    20px 90px 0 black,
-    10px 95px 0 black,
-    15px 95px 0 black,
-    20px 95px 0 black,
-    10px 100px 0 black,
-    15px 100px 0 black,
-    20px 100px 0 black,
-    15px 105px 0 black,
-    10px 110px 0 black,
-    15px 110px 0 black,
-    20px 110px 0 black,
-    5px 115px 0 black,
-    10px 115px 0 black,
-    20px 115px 0 black,
-    25px 115px 0 black,
-    10px 120px 0 black,
-    20px 120px 0 black,
-    /*right arm*/
-    100px 85px 0 black,
-    95px 90px 0 black,
-    100px 90px 0 black,
-    105px 90px 0 black,
-    95px 95px 0 black,
-    100px 95px 0 black,
-    105px 95px 0 black,
-    95px 100px 0 black,
-    100px 100px 0 black,
-    105px 100px 0 black,
-    100px 105px 0 black,
-    95px 110px 0 black,
-    100px 110px 0 black,
-    105px 110px 0 black,
-    90px 115px 0 black,
-    95px 115px 0 black,
-    105px 115px 0 black,
-    110px 115px 0 black,
-    95px 120px 0 black,
-    105px 120px 0 black
+
+.hair {
+  position: absolute;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 30px;
+}
+
+.hair:before {
+  content: "";
+  position: absolute;
+  background: black;
+  height: 100%;
+  width: 10px;
+  left: 0;
+  top: 30px;
+}
+
+.hair:after {
+  content: "";
+  position: absolute;
+  background: black;
+  height: 100%;
+  width: 10px;
+  right: 0;
+  top: 30px;
+}
+
+.meche {
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  height: 20px;
+  width: 20px;
+  background: black;
+  border-radius: 20px;
+}
+
+.meche:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  height: 25px;
+  width: 10px;
+  background: black;
+  border-radius: 20px;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+}
+
+.eye-left {
+  position: absolute;
+  left: 30px;
+  top: 53px;
+  background: #53BCE6;
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  border: solid 4px black;
+}
+
+.eye-left:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  left: -8px;
+  top: -4.5px;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+}
+
+.eye-right {
+  position: absolute;
+  right: 30px;
+  top: 53px;
+  background: #53BCE6;
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  border: solid 4px black;
+}
+
+.eye-right:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  left: -8px;
+  top: -4.5px;
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+}
+
+.mouth {
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 4px;
+  background: #000;
+}
+
+.mouth:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 4px;
+  right: -6px;
+  top: 1.5px;
+  background: #000;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+}
+
+.mouth:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 4px;
+  left: -6px;
+  top: 1.5px;
+  background: #000;
+  transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+}
+
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
 }
 
    </style>
 </head>
 <body>
-
-<div class="robot1"></div>
-<div class="robot2"></div>
-<div class="robot3"></div>
-<div class="robot4"></div>
-<div class="robot5"></div>
+	<div class="superman" style="margin-top:200px;">
+  <div class="head">
+    <!-- Face -->
+    <div class="face">
+      <!-- Hair -->
+      <div class="hair">
+        <div class="meche"></div>
+      </div>
+      
+      <!-- Eyes -->
+      <div class="eye-right"></div>
+      <div class="eye-left"></div>
+      
+      <!-- Mouth -->
+      <div class="mouth"></div>
+    </div>
+  </div>
+  
+  <!-- Mantle -->
+  <div class="mantle">
+    <div class="mantle-right"></div>
+    <div class="mantle-right-fix"></div>
+    
+    <div class="mantle-left"></div>
+    <div class="mantle-left-fix"></div>
+  </div>
+  <div class="mantle-neck"></div>
+  
+  <!-- Body -->
+  <div class="body"></div>
+  
+  <!-- Hands -->
+  <div class="hand-right"></div>
+  <div class="hand-left"></div>
+  
+  <!-- Feet -->
+  <div class="feet"></div>
+</div>
+<div>
+	<h1 align="center" style="font-family:archive; color:DarkSlateGray;" >
+		This page is currently under development.
+	</h1>
+</div>
 </body>
   
 </html>
