@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lock<span style="color:coral;">r</span></a>
+				<a class="navbar-brand" href="/" style="font-family: archive; color:teal; font-size:20px;">Lock<span style="color:tomato;">r</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,11 +22,10 @@
 						<li><a href="/auth/register">Register</a></li>
 					@else
 						<!--<form class="navbar-form navbar-left" role="search">
-        					<div class="form-group">
-          						<input type="text" class="form-control" placeholder="Search">
-        					</div>
-        					<button type="submit" class="btn btn-default">Search</button>
-      					</form>-->
+						  <div class="form-group">
+						    <input type="text" class="form-control" style="width:100%;" placeholder="Search files">
+						  </div>
+						</form>-->
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white; font-weight:bold;background-color: DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">

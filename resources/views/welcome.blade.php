@@ -37,7 +37,7 @@
 				font-size: 96px;
 				font-family:archive;
 				width: 400px;
-				color:DarkSlateGray;
+				color:teal;
 			}
 
 			.quote {
@@ -84,7 +84,7 @@
 	<div class="se-pre-con"></div>
 		<div class="container">
 			<div class="content">
-				<div class="title">Lock<span style="color:coral;">r</span></div>
+				<div class="title">Lock<span style="color:tomato;">r</span></div>
 				<div class="quote">Store and access files securely</div>
 				<div class="enter"><a href="/home"><b>Enter application</b></a></div>
 			</div>
