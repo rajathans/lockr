@@ -12,6 +12,14 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller {
 
+	public function about() {
+		return view('errors.503');
+	}
+
+	public function donate() {
+		return view('errors.503');
+	}
+
 	public function __construct() {
 		$this->middleware('auth');
 	}
@@ -46,14 +54,6 @@ class PagesController extends Controller {
 
 	public function upload() {
 		
-	}
-
-	public function about() {
-		return view('errors.503');
-	}
-
-	public function donate() {
-		return view('errors.503');
 	}
 
 	public function privacy() {

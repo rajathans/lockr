@@ -15,11 +15,16 @@ Route::get('/donate', 'PagesController@donate');
 Route::get('fileentry/get/{filename}', [
 	'as' => 'getentry', 
 	'uses' => 'FileEntryController@get'
-]);
-Route::post('fileentry/add',[ 
-        'as' => 'addentry', 
-        'uses' => 'FileEntryController@add'
-        ]);
+	]);
+Route::post('fileentry/add',[
+	'as' => 'addentry', 
+    'uses' => 'FileEntryController@add'
+    ]);
+
+Route::get('fileentry/search/results', [
+	'as' => 'searchentry', 
+	'uses' => 'FileEntryController@search'
+	]);
 
 /*Notices
 Route::resource('notices','NoticesController');*/

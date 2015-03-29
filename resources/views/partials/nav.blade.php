@@ -7,14 +7,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="font-family: archive; color:teal; font-size:20px;">Lock<span style="color:tomato;">r</span></a>
+				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lock<span style="color:tomato;">r</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav" style="font-we
 				ight:bold;">
 					<li><a href="/about">About</a></li>
-					<li><a href="/donate">Donate</a></li>
+					<!--<li><a href="/donate">Donate</a></li>-->
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -27,8 +27,9 @@
 						    <input type="text" class="form-control" style="width:100%;" placeholder="Search files">
 						  </div>
 						</form>-->
+
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #777777; font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: lavender; background-color:DarkSlateGray; font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/home">Home</a></li>
 								<li><a href="/profile">Profile</a></li>
