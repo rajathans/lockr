@@ -25,11 +25,21 @@ public function __construct() {
 
 public function index()	{
 
+	$pdf = 'application/pdf';
+	$img = 'image/png';
+
 	$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
 	$entries = Fileentry::all()->where('permissions',$currentUser); // use currentUser in the SQL where clause, returning files with current user permissions
+	$count = Fileentry::all()->where('permissions',$currentUser)->count();
+	$images = Fileentry::all()->where('permissions',$currentUser)->where('mime',$img);
+	$pdfs = Fileentry::all()->where('permissions',$currentUser)->where('mime',$pdf);
+	
 	return view('home',compact(
 		'currentUser',
-		'entries'
+		'entries',
+		'count',
+		'images',
+		'pdfs'
 	));
 	}
  

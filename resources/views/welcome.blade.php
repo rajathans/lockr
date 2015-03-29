@@ -43,7 +43,7 @@
 			.quote {
 				font-size: 24px;
 				margin-bottom: 10px;
-				margin-top: -20px;
+				margin-top: -10px;
 				font-family: "Trebuchet MS", Helvetica, sans-serif;
 				color: DarkSlateGray;
 				font-weight: bold;

@@ -1,8 +1,13 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 @font-face {
-        font-family: archive;
-          src: url("/fonts/archive/Archive.otf");
+  font-family: archive;
+  src: url("/fonts/archive/Archive.otf");
+}
+
+@font-face {
+  font-family: fabada;
+  src: url("/fonts/fabada/Fabada-regular.otf");
 }
 
 /* Paste this css to your style sheet file or under head tag */
@@ -4126,7 +4131,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  border-color: #fff;
 }
 .navbar-default .navbar-brand {
   color: #777777;
@@ -4141,11 +4146,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a {
   color: #777777;
+  font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
-  background-color: transparent;
+  background-color: white;
+  font-weight: bold;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,

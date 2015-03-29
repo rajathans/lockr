@@ -222,7 +222,7 @@
             
     <div class="container" style="margin-top:150px;">
       
-        <div><h1 style="font-family:archive; color:LightCoral; font-size:100px;">404</h1></div>
+        <div><h1 style="font-family:archive; color:LightCoral; font-weight:normal; font-size:100px;">404</h1></div>
               
         <div class="warning">            
             <h2 style="font-family:archive;">"All those moments will be lost in time, like tears in rain."</h2>
