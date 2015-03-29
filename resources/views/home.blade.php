@@ -9,7 +9,7 @@
               <form action="fileentry/add" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="file" name="filefield" style="margin-lef:0px;" class="btn">
-                <input type="submit" value="Save" style="margin-left:12px;" class="btn">
+                <input type="submit" value="Save file" style="margin-left:12px;" class="btn">
             </form>
             </ul>
             <hr>
