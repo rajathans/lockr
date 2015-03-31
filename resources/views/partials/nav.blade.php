@@ -29,13 +29,13 @@
 						</form>-->
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: lavender; background-color:DarkSlateGray; font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="/home"><b>Home</b></a></li>
-								<li><a href="/profile"><b>Profile</b></a></li>
-								<li><a href="/privacy"><b>Privacy</b></a></li>
-								<li><a href="/help"><b>Need help?</b></a></li>
-								<li><a  style="color:tomato;" href="/auth/logout"><b>Logout</b></a></li>
+								<li><a href="/home">Home</b></a></li>
+								<li><a href="/profile">Profile</b></a></li>
+								<li><a href="/privacy">Privacy</b></a></li>
+								<li><a href="/help">Need help?</b></a></li>
+								<li><a  style="color:tomato;" href="/auth/logout">Logout</b></a></li>
 							</ul>
 						</li>
 					@endif

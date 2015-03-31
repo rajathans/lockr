@@ -21,6 +21,11 @@ Route::post('fileentry/add',[
     'uses' => 'FileEntryController@add'
     ]);
 
+Route::get('fileentry/delete/{id}', [
+	'as' => 'deleteentry',
+	'uses' => 'FileEntryController@delete'
+	]);
+
 Route::get('fileentry/search/results', [
 	'as' => 'searchentry', 
 	'uses' => 'FileEntryController@search'

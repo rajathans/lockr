@@ -63,7 +63,7 @@ class FileEntryController extends Controller {
 		return redirect('home');
 		}
 
-	public function get($filename){
+	public function get($filename) {
 		
 			$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
 			$file = Storage::disk('local')->get($entry->filename);
@@ -75,5 +75,12 @@ class FileEntryController extends Controller {
 
 		$entries = Fileentry::where('filename', 'like', $filename)->firstOrFail();
 		return view('pages.search',compact('entries'));
+	}
+
+	public function delete($id) {
+
+		$file = Fileentry::find($id);
+		$file->delete();
+		return redirect('home');
 	}
 }
