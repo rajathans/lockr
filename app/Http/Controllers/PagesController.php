@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use Auth;
+use App\Fileentry;
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller {
 
 	public function about() {
-		return view('errors.503');
+		return view('pages.about');
 	}
 
 	public function donate() {
@@ -36,6 +37,10 @@ class PagesController extends Controller {
 		$course = Auth::user()->course;
 		$majors = Auth::user()->majors;
 		$age = Auth::user()->age;
+		$count = Fileentry::all()->where('permissions',$enrollno)->count();
+		$images = Fileentry::whereRaw('mime like ? and permissions = ?', ['%image%',$enrollno])->count();
+		$pdfs = Fileentry::whereRaw('mime like ? and permissions = ?', ['%pdf%',$enrollno])->count();
+		$others = Fileentry::whereRaw('mime not like ? and mime not like ? and permissions = ?',['%pdf%', '%image%',$enrollno])->count();
 		return view('pages.profile',compact(
 			'id',
 			'name',
@@ -43,17 +48,17 @@ class PagesController extends Controller {
 			'enrollno',
 			'course',
 			'majors',
-			'age'			
+			'age',
+			'images',
+			'pdfs',
+			'others',
+			'count'			
 			)
 		);
 	}
 
 	public function help() {
 		return view('pages.help');
-	}
-
-	public function upload() {
-		
 	}
 
 	public function privacy() {

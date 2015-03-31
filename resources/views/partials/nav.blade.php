@@ -31,11 +31,11 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: lavender; background-color:DarkSlateGray; font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="/home">Home</a></li>
-								<li><a href="/profile">Profile</a></li>
-								<li><a href="/privacy">Privacy</a></li>
-								<li><a href="/help">Need help?</a></li>
-								<li><a href="/auth/logout">Logout</a></li>
+								<li><a href="/home"><b>Home</b></a></li>
+								<li><a href="/profile"><b>Profile</b></a></li>
+								<li><a href="/privacy"><b>Privacy</b></a></li>
+								<li><a href="/help"><b>Need help?</b></a></li>
+								<li><a  style="color:tomato;" href="/auth/logout"><b>Logout</b></a></li>
 							</ul>
 						</li>
 					@endif

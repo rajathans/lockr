@@ -41,18 +41,18 @@
 			}
 
 			.quote {
-				font-size: 24px;
+				font-size: 20px;
 				margin-bottom: 10px;
 				margin-top: -10px;
-				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				font-family: ubuntu;
 				color: DarkSlateGray;
 				font-weight: bold;
 				text-align: center;
 			}
 
 			.enter {
-				font-size: 20px;
-				font-family: "Trebuchet MS", Helvetica, sans-serif;
+				font-size: 18px;
+				font-family: ubuntu;
 				text-align: center;
 			}
 

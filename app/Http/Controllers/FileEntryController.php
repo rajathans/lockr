@@ -31,6 +31,7 @@ class FileEntryController extends Controller {
 		$img2 = 'image/jpg';
 
 		$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
+		$files = Fileentry::all()->where('permissions',$currentUser);
 		$count = Fileentry::all()->where('permissions',$currentUser)->count();
 		$images = Fileentry::whereRaw('mime like ? and permissions = ?', ['%image%',$currentUser])->get();
 		$pdfs = Fileentry::whereRaw('mime like ? and permissions = ?', ['%pdf%',$currentUser])->get();
@@ -41,6 +42,7 @@ class FileEntryController extends Controller {
 			'count',
 			'images',
 			'others',
+			'files',
 			'pdfs'
 		));
 		}
