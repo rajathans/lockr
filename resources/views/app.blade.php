@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lockr</title>
 	<link href="/css/app.css" rel="stylesheet">
+	<script src="js/sorttable.js"></script>
 	
 </head>
 <body style="padding-top:70px;">

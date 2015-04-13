@@ -17,8 +17,6 @@
 				width: 100%;
 				height: 100%;
 				color: #B0BEC5;
-				background-image: url("http://subtlepatterns.com/patterns/sativa.png");
-				background-repeat: repeat;
 				display: table;
 				font-weight: 100;
 			}
