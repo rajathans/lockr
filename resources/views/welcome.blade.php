@@ -17,7 +17,8 @@
 				width: 100%;
 				height: 100%;
 				color: #B0BEC5;
-				background-color: white;
+				background-image: url("http://subtlepatterns.com/patterns/sativa.png");
+				background-repeat: repeat;
 				display: table;
 				font-weight: 100;
 			}
@@ -84,7 +85,7 @@
 	<div class="se-pre-con"></div>
 		<div class="container">
 			<div class="content">
-				<div class="title">Lock<span style="color:tomato;">r</span></div>
+				<div class="title">Lock<span style="color:crimson;">r</span></div>
 				<div class="quote">Store and access files securely</div>
 				<div class="enter"><a href="/home"><b>Enter application</b></a></div>
 			</div>

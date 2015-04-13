@@ -33,15 +33,14 @@
 			Lockr is primarily developed using the Laravel PHP framework.
 			Technologies used in development of this web application are as follows:<br>
 			<div style="color:DarkSlateGray;">
-				<b>1. Laravel PHP framework,<br>
-				2. LAMP (Linux Apache MySQL PHP) server,<br>
-				3. MySQL blob datatype<br>
-				4. Sublime Text 3<br>
-				5. Google Chrome/ Chromium web browsers<br>
-				6. Firefox web browser<br>
-				7. Laravel debug bar<br>
-				8. Koding.com (for remote development)<br>
-				9. Github<b>
+				<b>1. <a href="laravel.com/">Laravel PHP framework,</a><br>
+				2. <a href="http://lamphowto.com/">LAMP (Linux Apache MySQL PHP) server</a><br>
+				4. <a href="http://www.sublimetext.com/">Sublime Text 3</a><br>
+				5. <a href="http://www.google.com/chrome/">Google Chrome/ Chromium web browsers</a><br>
+				6. <a href="https://www.mozilla.org/en-US/firefox/products/">Firefox web browser</a><br>
+				7. <a href="https://github.com/barryvdh/laravel-debugbar">Laravel debug bar</a><br>
+				8. <a href="http://koding.com/">Koding.com (for remote development)</a><br>
+				9. <a href="https://github.com/rajathans/lockr">Github</a><b>
 			</div>
 		</h5>
 	</div>

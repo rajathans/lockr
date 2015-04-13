@@ -222,12 +222,12 @@
             
     <div class="container" style="margin-top:150px;">
       
-        <div><h1 style="font-family:archive; color:LightCoral; font-weight:normal; font-size:100px;">404</h1></div>
+        <div><h1 style="font-family:ubuntu; color:LightCoral; font-weight:bold; font-size:100px;">404</h1></div>
               
         <div class="warning">            
-            <h2 style="font-family:archive;">"All those moments will be lost in time, like tears in rain."</h2>
-            <p style="font-family:archive;font-size:20px;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-            <a style="font-family:archive;" href="javascript:history.back()">Please go back to the previous page</a>
+            <h2 style="font-family:ubuntu;">"All those moments will be lost in time, like tears in rain."</h2>
+            <p style="font-family:ubuntu;font-size:20px;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            <a style="font-family:ubuntu;" href="javascript:history.back()">Please go back to the previous page</a>
         </div>
 
     </div><!-- /.container -->                             

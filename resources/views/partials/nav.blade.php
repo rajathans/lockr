@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lock<span style="color:tomato;">r</span></a>
+				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lock<span style="color:crimson;">r</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -29,13 +29,13 @@
 						</form>-->
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; color:white; background-color:DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/home">Home</b></a></li>
 								<li><a href="/profile">Profile</b></a></li>
 								<li><a href="/privacy">Privacy</b></a></li>
 								<li><a href="/help">Need help?</b></a></li>
-								<li><a  style="color:tomato;" href="/auth/logout">Logout</b></a></li>
+								<li><a  style="color:crimson;" href="/auth/logout">Logout</b></a></li>
 							</ul>
 						</li>
 					@endif

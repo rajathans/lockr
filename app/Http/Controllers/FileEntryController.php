@@ -83,4 +83,8 @@ class FileEntryController extends Controller {
 		$file->delete();
 		return redirect('home');
 	}
+
+	public function update($id) {
+		
+	}
 }
