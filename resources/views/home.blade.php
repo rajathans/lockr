@@ -10,18 +10,16 @@
                 <input type="submit" value="Save file" style="margin-left:12px;" class="btn btn-default">
                 <hr>
                 </form>
-                <input id="filter" type="text" class="form-control" placeholder="Type here...">
+                    <input id="filter" type="text" class="form-control" placeholder="Type here...">
                 <hr>
             </ul>
                 </div>
                     <div class="col-md-9">
-                <table id="myTable" class="table table-striped">
+                <table id="myTable" style="width:;" class="table table-striped">
                      <thead>
                         <tr style="background-color:#f8f8f8;">
                             <th>Filename</th>
-                            <th>Original filename</th>
                             <th>Type</th>
-                            <th>Uploaded on</th>
                             <th>View</th>
                             <th>Delete</th>
                         </tr> 
@@ -29,10 +27,8 @@
                     <tbody class="searchable">
                     @foreach ($files as $entry)
                         <tr>
-                            <td>{{ $entry->filename }}</td>
                             <td>{{ $entry->original_filename }}</td>
                             <td>{{ $entry->mime }}</td>
-                            <td>{{ $entry->created_at }}</td>
                             <td><a href="{{ route('getentry', [$entry->filename]) }}"><span class="btn btn-default btn-sm">View</span></a></td>
                             <td><a href="{{ route('deleteentry', [$entry->id]) }}" onclick="return confirm('Delete this file?')"><span class="btn btn-danger btn-sm">Delete</span></a></td>
                         </tr>
