@@ -173,7 +173,7 @@ h4 {
 	</head>
 	<body>
 	<div style="position: relative;  top: 50%; transform: translateY(-50%);" align="center" class="container">
-		<h1>LOCK<span style="color:crimson; text-decoration:underline;">R</span></h1>
+		<h1>LOCK<span style="color:crimson;">R</span></h1>
 		<h4>Store and access files securely</h4>
 
 <nav class="menu">

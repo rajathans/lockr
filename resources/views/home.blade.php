@@ -10,8 +10,8 @@
                 <input type="submit" value="Save file" style="margin-left:12px;" class="btn btn-default">
                 <hr>
                 </form>
-                <div class="input-group"> <span class="input-group-addon">Filter</span>
                 <input id="filter" type="text" class="form-control" placeholder="Type here...">
+                <hr>
             </ul>
                 </div>
                     <div class="col-md-9">
