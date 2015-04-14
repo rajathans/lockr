@@ -4,41 +4,49 @@
     <div class="row">
         <div class="col-md-3">
             <ul class="nav nav-stacked">
-              <form action="fileentry/add" method="post" enctype="multipart/form-data">
+              <form style="background-color:#f8f8f8" action="fileentry/add" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="file" name="filefield" style="margin-lef:0px;" class="btn">
                 <input type="submit" value="Save file" style="margin-left:12px;" class="btn btn-default">
-            </form>
+                <hr>
+                </form>
+                <div class="input-group"> <span class="input-group-addon">Filter</span>
+                <input id="filter" type="text" class="form-control" placeholder="Type here...">
             </ul>
-        </div>
-        <div class="col-md-9">
-         <table class="table sorttable">
-         <thead>
+                </div>
+                    <div class="col-md-9">
+                <table id="myTable" class="table table-striped">
+                     <thead>
                         <tr style="background-color:#f8f8f8;">
-                            <th>id</th>
                             <th>Filename</th>
                             <th>Original filename</th>
                             <th>Type</th>
                             <th>Uploaded on</th>
                             <th>View</th>
                             <th>Delete</th>
-                        </tr> </thead>
-                        <tbody>
+                        </tr> 
+                    </thead>
+                    <tbody class="searchable">
                     @foreach ($files as $entry)
                         <tr>
-                        <td>{{ $entry->id }}</td>
-                        <td>{{ $entry->filename }}</td>
-                        <td>{{ $entry->original_filename }}</td>
-                        <td>{{ $entry->mime }}</td>
-                        <td>{{ $entry->created_at }}</td>
-                        <td><a href="{{ route('getentry', [$entry->filename]) }}"><span class="btn btn-default btn-sm">View</span></a></td>
-                        <td><a href="{{ route('deleteentry', [$entry->id]) }}" onclick="return confirm('Delete this file?')"><span class="btn btn-danger btn-sm">Delete</span></a></td></tr>
+                            <td>{{ $entry->filename }}</td>
+                            <td>{{ $entry->original_filename }}</td>
+                            <td>{{ $entry->mime }}</td>
+                            <td>{{ $entry->created_at }}</td>
+                            <td><a href="{{ route('getentry', [$entry->filename]) }}"><span class="btn btn-default btn-sm">View</span></a></td>
+                            <td><a href="{{ route('deleteentry', [$entry->id]) }}" onclick="return confirm('Delete this file?')"><span class="btn btn-danger btn-sm">Delete</span></a></td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>   
-        </div>
+            </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
+</script>
     <!--<div class="container">
     <div class="row">
       <div class="col-md-3">

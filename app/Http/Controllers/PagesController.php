@@ -31,6 +31,7 @@ class PagesController extends Controller {
 	}**/
 
 	public function profile() {
+		$number = 0;
 		$name = Auth::user()->name;
 		$email = Auth::user()->email;
 		$enrollno = Auth::user()->enroll_no;
@@ -52,7 +53,8 @@ class PagesController extends Controller {
 			'images',
 			'pdfs',
 			'others',
-			'count'			
+			'count',
+			'number'			
 			)
 		);
 	}
