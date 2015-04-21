@@ -1,5 +1,6 @@
 <html>
 	<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<style>
 			@font-face {
 				font-family: archive;
@@ -7,7 +8,7 @@
 			}
 
 			body {
-  background: #f8f8f8;
+  background: LightSeaGreen;
   color: white;
   text-align: center;
 }
@@ -25,13 +26,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 80px;
   font-family: archive;
   color:DarkSlateGray;
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 18px;
   font-family: archive;
   color:DarkSlateGray;
   margin-top: -20px;

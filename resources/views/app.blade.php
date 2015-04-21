@@ -9,8 +9,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
 	<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<script src="js/sorttable.js"></script>
 	<script src="js/search.js"></script>
+	<script src="js/totop.js"></script>
+	<script type="js/sidebar.js"></script>
 	
 </head>
 <body style="padding-top:70px;">

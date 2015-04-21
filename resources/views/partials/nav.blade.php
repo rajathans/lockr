@@ -11,9 +11,9 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav" style="font-we
-				ight:bold;">
+				<ul class="nav navbar-nav" style="font-weight:bold;">
 					<li><a href="/about">About</a></li>
+					<li><a href="#">Help</a>
 					<!--<li><a href="/donate">Donate</a></li>-->
 				</ul>
 
@@ -27,11 +27,10 @@
 						    <input type="text" class="form-control" style="width:100%;" placeholder="Search files">
 						  </div>
 						</form>-->
-
+						<li><a href="/home">Home</b></a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; color:white; background-color:DarkSlateGray;" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; color: #f8f8f8; background-color:SlateGray" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="/home">Home</b></a></li>
 								<li><a href="/profile">Profile</b></a></li>
 								<li><a href="/privacy">Privacy</b></a></li>
 								<li><a href="/help">Need help?</b></a></li>
