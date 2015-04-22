@@ -2165,6 +2165,7 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 0px;
+  margin-top: 10px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -6374,3 +6375,5 @@ label,
     .navbar>.container-fluid .navbar-brand-centered {
         margin-left: -80px;
     }
+
+/**************************************/

@@ -13,7 +13,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav" style="font-weight:bold;">
 					<li><a href="/about">About</a></li>
-					<li><a href="#">Help</a>
+					<li><a href="/help">Help</a>
 					<!--<li><a href="/donate">Donate</a></li>-->
 				</ul>
 
@@ -33,7 +33,6 @@
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/profile">Profile</b></a></li>
 								<li><a href="/privacy">Privacy</b></a></li>
-								<li><a href="/help">Need help?</b></a></li>
 								<li><a  style="color:crimson;" href="/auth/logout">Logout</b></a></li>
 							</ul>
 						</li>

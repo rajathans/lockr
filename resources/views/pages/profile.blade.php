@@ -14,7 +14,7 @@
             
             <div class="panel status">
                 <div class="panel-heading">
-                    <a href="/home" style="text-decoration:none;"><h1 class="panel-title text-center">{{ $count }}</h1></a>
+                    <a href="/home" style="text-decoration:none;"><h1 class="panel-title text-center" style="color:IndianRed; background-color:#f8f8f8; font-size:50px; font-weight:bold;">{{ $count }}</h1></a>
                 </div>
                 <div class="panel-body text-center">                        
                     <strong>Total Files</strong>
@@ -25,7 +25,7 @@
     <div class="col-md-2">
             <div class="panel status">
                 <div class="panel-heading">
-                    <a href="/home" style="text-decoration:none;"><h1 class="panel-title text-center">{{ $pdfs }}</h1></a>
+                    <a href="/home" style="text-decoration:none;"><h1 class="panel-title text-center" style="color:IndianRed; background-color:#f8f8f8; font-size:50px; font-weight:bold;">{{ $pdfs }}</h1></a>
                 </div>
                 <div class="panel-body text-center">                        
                     <strong>PDFs</strong>
@@ -35,7 +35,7 @@
     <div class="col-md-2">
             <div class="panel status">
                 <div class="panel-heading">
-                    <a href="/home" style="color:crimson;"><h1 class="panel-title text-center">{{ $images }}</h1></a>
+                    <a href="/home" style="text-decoration:none;"><h1 class="panel-title text-center" style="color:IndianRed; background-color:#f8f8f8; font-size:50px; font-weight:bold;">{{ $images }}</h1></a>
                 </div>
                 <div class="panel-body text-center">                        
                     <strong>Images</strong>

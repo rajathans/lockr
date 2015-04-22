@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" style="background-color:#f8f8f8;">
             <ul class="nav nav-stacked">
               <h5>Upload new file</h5>
               <form style="background-color:#f8f8f8" action="fileentry/add" method="post" enctype="multipart/form-data">
@@ -11,16 +11,15 @@
                 <input type="submit" value="Save" style="margin-left:12px;" class="btn btn-primary">
                 <hr>
                 </form>
-                <hr>
                     <h5>Search for files accodring to name, type, date etc.</h5>
                     <input id="filter" type="text" class="form-control" placeholder="Search files...">
                 <hr>
             </ul>
                 </div>
                     <div class="col-md-9">
-                <table id="myTable" style="width:;" class="table table-striped">
+                <table id="myTable" style="background-color:white;" class="table table-striped">
                      <thead>
-                        <tr style="background-color:#f8f8f8;">
+                        <tr style="background-color:IndianRed; color:#f8f8f8;">
                             <th>Filename</th>
                             <th>Type</th>
                             <th>View</th>
