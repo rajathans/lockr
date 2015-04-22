@@ -17,21 +17,20 @@ class PagesController extends Controller {
 		return view('pages.about');
 	}
 
-	public function donate() {
+	/*public function donate() {
 		return view('errors.503');
-	}
+	}*/
 
 	public function __construct() {
 		$this->middleware('auth');
 	}
 
-	/**public function home() {
+	/*public function home() {
 		$users = User::all();
 		return view('home')->with('users',$users);
-	}**/
+	}*/
 
 	public function profile() {
-		$number = 0;
 		$name = Auth::user()->name;
 		$email = Auth::user()->email;
 		$enrollno = Auth::user()->enroll_no;
@@ -53,8 +52,7 @@ class PagesController extends Controller {
 			'images',
 			'pdfs',
 			'others',
-			'count',
-			'number'			
+			'count'
 			)
 		);
 	}

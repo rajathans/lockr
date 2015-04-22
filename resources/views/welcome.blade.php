@@ -8,7 +8,7 @@
 			}
 
 			body {
-  background: LightSeaGreen;
+  background: DarkSlateGray;
   color: white;
   text-align: center;
 }
@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 80px;
   font-family: archive;
-  color:DarkSlateGray;
+  color:IndianRed;
 }
 
 h4 {
@@ -46,7 +46,7 @@ h4 {
 }
 
 .menu-item, .menu-open-button {
-  background: crimson;
+  background: IndianRed;
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -113,7 +113,7 @@ h4 {
 }
 
 .menu-item:hover {
-  background: DarkSlateGray;
+  background: crimson;
   color: white;
 }
 .menu-item:nth-child(3) {
@@ -175,7 +175,6 @@ h4 {
 	<body>
 	<div style="position: relative;  top: 50%; transform: translateY(-50%);" align="center" class="container">
 		<h1>LOCK<span style="color:crimson;">R</span></h1>
-		<h4>Store and access files securely</h4>
 
 <nav class="menu">
   <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
@@ -186,7 +185,7 @@ h4 {
   </label>
   
   <a href="/auth/login" style="text-decoration:none;" class="menu-item">Enter</a>
-  <a href="/auth/register" style="text-decoration:none;" class="menu-item">Register</a>  
+  <a href="/about" style="text-decoration:none;" class="menu-item">About</a>  
 </nav>
 
 

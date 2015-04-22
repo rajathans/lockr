@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/" style="font-family: archive; color:DarkSlateGray; font-size:20px;">Lock<span style="color:crimson;">r</span></a>
+				<a class="navbar-brand navbar-brand-centered" href="/" style="font-family: archive; color:IndianRed; font-size:22px;">Lock<span style="color:crimson;">r</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -29,7 +29,7 @@
 						</form>-->
 						<li><a href="/home">Home</b></a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; color: #f8f8f8; background-color:SlateGray" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-weight:bold; color: #f8f8f8; background-color:teal" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/profile">Profile</b></a></li>
 								<li><a href="/privacy">Privacy</b></a></li>

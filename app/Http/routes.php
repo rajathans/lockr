@@ -8,7 +8,7 @@ Route::get('/help','PagesController@help');
 Route::get('/privacy', 'PagesController@privacy');
 Route::get('/about', 'PagesController@about');
 Route::get('/upload', 'PagesController@upload');
-Route::get('/donate', 'PagesController@donate');
+//Route::get('/donate', 'PagesController@donate');
 
 /*File handling and related routes*/
 

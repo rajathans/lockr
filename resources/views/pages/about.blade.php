@@ -33,7 +33,7 @@
 			Lockr is primarily developed using the Laravel PHP framework.
 			Technologies used in development of this web application are as follows:<br>
 			<div style="color:DarkSlateGray;">
-				<b>1. <a href="laravel.com/">Laravel PHP framework,</a><br>
+				<b>1. <a href="http://laravel.com/">Laravel PHP framework,</a><br>
 				2. <a href="http://lamphowto.com/">LAMP (Linux Apache MySQL PHP) server</a><br>
 				4. <a href="http://www.sublimetext.com/">Sublime Text 3</a><br>
 				5. <a href="http://www.google.com/chrome/">Google Chrome/ Chromium web browsers</a><br>

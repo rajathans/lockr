@@ -4,6 +4,7 @@
     <div class="row">
         <div class="col-md-3">
             <ul class="nav nav-stacked">
+              <h5>Upload new file</h5>
               <form style="background-color:#f8f8f8" action="fileentry/add" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="file" name="filefield" style="margin-lef:0px;" class="btn">
@@ -52,7 +53,7 @@
                                                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">No</button>
                                                 </td>
                                                 <td>
-                                                <a href="{{ route('deleteentry', [$entry->id]) }}" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-trash-o fa-fw"></i>Yes</a>
+                                                <a href="{{ route('deleteentry', [$entry->id]) }}" class="btn btn-danger btn-sm" style="width:90px;" data-toggle="modal"><i class="fa fa-trash-o fa-fw"></i>Yes</a>
                                                 </td>
                                             </table>
                                             </div>
