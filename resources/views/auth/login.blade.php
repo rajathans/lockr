@@ -51,6 +51,8 @@
 								</button>
 
 								<a href="/password/email">Forgot Your Password?</a>
+								<span> or </span>
+								<a href="/auth/register">Register</a>
 							</div>
 						</div>
 					</form>

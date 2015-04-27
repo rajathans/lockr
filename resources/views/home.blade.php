@@ -19,7 +19,7 @@
                     <div class="col-md-9">
                 <table id="myTable" style="background-color:white;" class="table table-striped">
                      <thead>
-                        <tr style="background-color:IndianRed; color:#f8f8f8;">
+                        <tr style="background-color:teal; color:#f8f8f8;">
                             <th>Filename</th>
                             <th>Type</th>
                             <th>View</th>

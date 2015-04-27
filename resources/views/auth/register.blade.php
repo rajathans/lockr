@@ -81,6 +81,8 @@
 								<button type="submit" class="btn btn-normal">
 									Register
 								</button>
+								<span> or </span>
+								<a href="/auth/login">Login</a>
 							</div>
 						</div>
 					</form>
