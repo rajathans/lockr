@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div class="col-md-8" style="background-color:#f8f8f8;">
-                <table id="myTable" class="table table-striped">
+                <table id="myTable" class="table table-striped table-hover table-responsive">
                     <tbody class="searchable">
                     @foreach ($files as $entry)
                         <tr>
