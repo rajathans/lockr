@@ -37,7 +37,7 @@
                                             <hr>
                                             <div class="modal-body" style="margin-top:-20px;">
                                                 <p>Do you want to delete the file <a style="text-decoration:none; font-weight:bold;" href="{{ route('getentry', [$entry->filename]) }}"> {{ $entry->filename }} </a>permanently?</p>
-                                                <p class="text-primary" style="margin-top:-40px; color:tomato;"><small>If you click yes, the file will be deleted from our database permanently.</small></p>
+                                                <p class="text-primary" style="margin-top:-40px;"><small>If you click yes, the file will be deleted from our database permanently.</small></p>
                                             </div>
                                             <div class="modal-footer" style="margin-top:-40px;">
                                             <table align="center">
