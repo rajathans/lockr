@@ -23,42 +23,46 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Name</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" placeholder="Bruce Wayne" value="{{ old('name') }}">
+								<input type="text" class="form-control" name="name" placeholder="Bruce Wayne" value="">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Enroll number</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="enroll_no" placeholder="11 digits long" value="{{ old('enroll_no') }}">
+								<input type="text" class="form-control" name="enroll_no" placeholder="11 digits long" value="">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Course</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="course" placeholder="eg. B Tech" value="{{ old('course') }}">
+								<input type="text" class="form-control" name="course" placeholder="eg. B Tech" value="">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Majors</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="majors" placeholder="eg. IT/CSE/ECE" value="{{ old('majors') }}">
+								<select class="form-control" id="select" name="majors" placeholder="eg. IT" value="">
+				                    <option>IT</option>
+				                    <option>CSE</option>
+				                    <option>ECE</option>
+				                </select>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Age</label>
+							<label class="col-md-4 control-label">Date of Birth</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="age" placeholder="" value="{{ old('age') }}">
+								<input type="text" class="form-control" name="age" placeholder="dd/mm/yyyy" value="">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" placeholder="brucewayne@batmail.com" value="{{ old('email') }}">
+								<input type="email" class="form-control" name="email" placeholder="brucewayne@batmail.com" value="">
 							</div>
 						</div>
 
@@ -78,11 +82,9 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-normal">
+								<button type="submit" class="btn btn-default btn-success">
 									Register
 								</button>
-								<span> or </span>
-								<a href="/auth/login">Login</a>
 							</div>
 						</div>
 					</form>

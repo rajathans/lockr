@@ -10,6 +10,10 @@
   src: url("/fonts/fabada/Fabada-regular.otf");
 }
 
+html , body {
+  font-family: ubuntu;
+}
+
 
 /* Paste this css to your style sheet file or under head tag */
 /* This only works with JavaScript, 
@@ -2165,7 +2169,7 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 0px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2174,13 +2178,13 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
   padding: 7px;
-  line-height: 2;
+  line-height: 4;
   vertical-align: top;
   border-top: 0px solid #dddddd;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 0px solid #dddddd;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -2191,7 +2195,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 0px solid #dddddd;
 }
 .table .table {
   background-color: #ffffff;
@@ -2202,10 +2206,10 @@ th {
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
-  padding: 5px;
+  padding: 0px;
 }
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 0px solid #dddddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2213,17 +2217,14 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 0px solid #dddddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
 }
-.table-striped > tbody > tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-.table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+.table-striped > tbody > tr {
+  background-color: #f8f8f8;
 }
 table col[class*="col-"] {
   position: static;
@@ -2345,13 +2346,22 @@ table th[class*="col-"] {
   overflow-x: auto;
   min-height: 0.01%;
 }
+
+@media screen and (max-width: 767) {
+  .table-responsive {
+    margin-left: 10px;
+    background-color:;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
+    margin-top: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 0px solid #dddddd;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -3904,7 +3914,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4085,6 +4095,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
+
   }
 }
 @media (min-width: 768px) {
@@ -6189,6 +6200,7 @@ button.close {
     display: inline-block !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
     display: block !important;
@@ -6205,6 +6217,7 @@ button.close {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+
   .visible-sm-block {
     display: block !important;
   }
@@ -6377,3 +6390,39 @@ label,
     }
 
 /**************************************/
+
+#snackbar-container {
+  position: fixed;
+  left: 20px;
+  bottom: 0;
+  z-index: 99999;
+}
+.snackbar {
+  overflow: hidden;
+  clear: both;
+  min-width: 288px;
+  max-width: 568px;
+  cursor: pointer;
+  opacity: 0;
+}
+.snackbar.snackbar-opened {
+  height: auto;
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  #snackbar-container {
+    left: 0px !important;
+    right: 0px;
+    width: 100%;
+  }
+  #snackbar-container .snackbar {
+    min-width: 100%;
+  }
+  #snackbar-container [class="snackbar snackbar-opened"] ~ .snackbar.toast {
+    margin-top: 20px;
+  }
+  #snackbar-container [class="snackbar snackbar-opened"] {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}

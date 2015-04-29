@@ -10,11 +10,10 @@
 	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
 	<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<script src="js/sorttable.js"></script>
+    <link href="/css/material.css" rel="stylesheet">
+    <link href="/css/ripples.css" rel="stylesheet">
 	<script src="js/search.js"></script>
 	<script src="js/totop.js"></script>
-	<script type="js/sidebar.js"></script>
-	
 </head>
 <body style="padding-top:70px;">
 
@@ -24,7 +23,16 @@
 		@yield('content')
 	</div>
 	
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="js/ripples.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="js/snackbar.js"></script>
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            $.material.init();
+        });
+    </script>
 </body>
 </html>
