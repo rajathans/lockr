@@ -32,18 +32,9 @@ class FileEntryController extends Controller {
 
 		$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
 		$files = Fileentry::all()->where('permissions',$currentUser);
-		$count = Fileentry::all()->where('permissions',$currentUser)->count();
-		$images = Fileentry::whereRaw('mime like ? and permissions = ?', ['%image%',$currentUser])->get();
-		$pdfs = Fileentry::whereRaw('mime like ? and permissions = ?', ['%pdf%',$currentUser])->get();
-		$others = Fileentry::whereRaw('mime not like ? and mime not like ? and permissions = ?',['%pdf%', '%image%',$currentUser])->get();
 		return view('home',compact(
 			'currentUser',
-			'entries',
-			'count',
-			'images',
-			'others',
-			'files',
-			'pdfs'
+			'files'
 		));
 		}
 	 
