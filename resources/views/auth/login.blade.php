@@ -7,7 +7,7 @@
 			<div class="panel">
 				<div class="panel-body">
 					@if (count($errors) > 0)
-						<div class="alert">
+						<div class="alert alert-dissmissble alert-danger" style="background-color:IndianRed; font-weight:bold;">
 							<strong>Whoops!</strong> There were some problems with your input.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)

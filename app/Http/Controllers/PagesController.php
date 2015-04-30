@@ -35,6 +35,7 @@ class PagesController extends Controller {
 		$email = Auth::user()->email;
 		$enrollno = Auth::user()->enroll_no;
 		$course = Auth::user()->course;
+		$phone = Auth::user()->phone;
 		$majors = Auth::user()->majors;
 		$age = Auth::user()->age;
 		$count = Fileentry::all()->where('permissions',$enrollno)->count();
@@ -49,10 +50,7 @@ class PagesController extends Controller {
 			'course',
 			'majors',
 			'age',
-			'images',
-			'pdfs',
-			'others',
-			'count'
+			'phone'
 			)
 		);
 	}

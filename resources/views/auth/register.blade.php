@@ -7,7 +7,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					@if (count($errors) > 0)
-						<div class="alert alert-danger">
+						<div class="alert alert-dissmissble alert-danger" style="background-color:IndianRed; font-weight:bold;">
 							<strong>Whoops!</strong> There were some problems with your input.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
@@ -56,6 +56,13 @@
 							<label class="col-md-4 control-label">Date of Birth</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control floating-label" name="age" placeholder="dd/mm/yyyy">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Phone number</label>
+							<div class="col-md-6">
+								<input type="number" name="phone" class="form-control floating-label" placeholder="number">
 							</div>
 						</div>
 

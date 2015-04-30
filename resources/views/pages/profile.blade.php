@@ -8,20 +8,6 @@
     	<h5><b>Majored in</b> 	: {{ $majors }}</h5>
     	<h5><b>Email ID</b> 	: {{ $email }}</h5>
     	<h5><b>Date of birth</b>			: {{ $age }}</h5>
+        <h5><b>Phone number</b>         : {{ $phone }}</h5>
 	</div>
-
-    <!--@if ($count > 0)
-    	<div class="col-md-2">
-                <div class="panel status">
-                    <div class="panel-heading">
-                        <a href="/home" style="text-decoration:none; background-color:white; "><h1 class="panel-title text-center" style="color:IndianRed; background-color:white; font-size:50px; font-weight:bold;">{{ $count }}</h1></a>
-                    </div>
-                    <div class="panel-body text-center">                        
-                        <strong>Total Files</strong>
-                    </div>
-                </div>
-        </div>
-     @else
-        <h5>You have no files.</h5>
-     @endif-->
 @stop

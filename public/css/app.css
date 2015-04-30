@@ -358,7 +358,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: teal !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -2145,7 +2145,7 @@ pre code {
   }
 }
 table {
-  background-color: transparent;
+  background-color: teal;
 }
 caption {
   padding-top: 8px;
@@ -2168,13 +2168,13 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 7px;
-  line-height: 4;
-  vertical-align: top;
+  padding: 0px;
+  line-height: 1;
+  vertical-align: inherit;
   border-top: 0px solid #dddddd;
 }
 .table > thead > tr > th {
-  vertical-align: bottom;
+  vertical-align: inherit;
   border-bottom: 0px solid #dddddd;
 }
 .table > caption + thead > tr:first-child > th,
@@ -2189,7 +2189,7 @@ th {
   border-top: 0px solid #dddddd;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: teal;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -2215,7 +2215,7 @@ th {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr {
-  background-color: #f8f8f8;
+  background-color: white;
 }
 table col[class*="col-"] {
   position: static;
@@ -2336,7 +2336,7 @@ table th[class*="col-"] {
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 @media screen and (max-width: 767) {

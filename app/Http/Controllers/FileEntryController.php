@@ -25,11 +25,6 @@ class FileEntryController extends Controller {
 
 	public function index()	{
 
-		$pdf = 'application/pdf';
-		$img = 'image/png';
-		$img1 = 'image/jpeg';
-		$img2 = 'image/jpg';
-
 		$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
 		$files = Fileentry::all()->where('permissions',$currentUser);
 		return view('home',compact(
