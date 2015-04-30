@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      $('body').append('<div id="toTop" style="background-color:teal; color:#f8f8f8;" class="btn btn-info"><i class="fa fa-bolt"></i> Back to Top</div>');
+      $('body').append('<div id="toTop" class="btn btn-primary btn-default">Back to Top</div>');
     	$(window).scroll(function () {
 			if ($(this).scrollTop() != 0) {
 				$('#toTop').fadeIn();

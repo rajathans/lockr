@@ -31,6 +31,11 @@ Route::get('fileentry/search/results', [
 	'uses' => 'FileEntryController@search'
 	]);
 
+Route::get('fileentry/edit/{id}', [
+	'as'  => 'editentry',
+	'uses' => 'FileEntryController@edit'
+	]);
+
 /*Notices
 Route::resource('notices','NoticesController');*/
 

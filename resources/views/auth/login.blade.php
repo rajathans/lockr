@@ -7,7 +7,7 @@
 			<div class="panel">
 				<div class="panel-body">
 					@if (count($errors) > 0)
-						<div class="alert alert-danger">
+						<div class="alert">
 							<strong>Whoops!</strong> There were some problems with your input.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
@@ -23,7 +23,7 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="">
+								<input type="email" class="form-control floating-label" name="email" placeholder="abc@xyz.com" value="{{ old('email') }}">
 							</div>
 						</div>
 
@@ -36,9 +36,9 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
+								<div class="checkbox checkbox-primary">
 									<label>
-										<input type="checkbox" name="remember">Remember Me
+										<input type="checkbox" name="remember">&nbspRemember Me
 									</label>
 								</div>
 							</div>
@@ -46,7 +46,7 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-default btn-success" style="margin-right: 15px;">
+								<button type="submit" class="btn btn-default btn-primary" style="margin-right: 15px;">
 									Login
 								</button>
 								<span> or </span>

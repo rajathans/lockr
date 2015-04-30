@@ -23,28 +23,28 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Name</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" placeholder="Bruce Wayne" value="">
+								<input type="text" class="form-control floating-label" name="name" placeholder="Bruce Wayne">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Enroll number</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="enroll_no" placeholder="11 digits long" value="">
+								<input type="text" class="form-control floating-label" name="enroll_no" placeholder="11 digits long">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Course</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="course" placeholder="eg. B Tech" value="">
+								<input type="text" class="form-control floating-label" name="course" placeholder="eg. B Tech">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Majors</label>
 							<div class="col-md-6">
-								<select class="form-control" id="select" name="majors" placeholder="eg. IT" value="">
+								<select class="form-control floating-label" id="select" name="majors" placeholder="eg. IT">
 				                    <option>IT</option>
 				                    <option>CSE</option>
 				                    <option>ECE</option>
@@ -55,28 +55,28 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Date of Birth</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="age" placeholder="dd/mm/yyyy" value="">
+								<input type="text" class="form-control floating-label" name="age" placeholder="dd/mm/yyyy">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" placeholder="brucewayne@batmail.com" value="">
+								<input type="email" class="form-control floating-label" name="email" placeholder="brucewayne@batmail.com">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
+								<input type="password" class="form-control floating-label" name="password" placeholder="">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Confirm Password</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
+								<input type="password" class="form-control floating-label" name="password_confirmation" placeholder="">
 							</div>
 						</div>
 

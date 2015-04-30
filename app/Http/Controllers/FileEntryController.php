@@ -84,7 +84,7 @@ class FileEntryController extends Controller {
 		return redirect('home');
 	}
 
-	public function update($id) {
-		
+	public function edit($id) {
+		$file = Fileentry::find($id);		
 	}
 }

@@ -15,7 +15,7 @@
 	<script src="js/search.js"></script>
 	<script src="js/totop.js"></script>
 </head>
-<body style="padding-top:70px;">
+<body style="padding-top:70px; font-family:ubuntu;">
 
 	@include('partials.nav')
 
@@ -25,9 +25,9 @@
 	
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="js/ripples.min.js"></script>
-    <script src="js/material.min.js"></script>
-    <script src="js/snackbar.js"></script>
+	<script src="/js/ripples.js"></script>
+    <script src="/js/material.js"></script>
+    <script src="/js/snackbar.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly

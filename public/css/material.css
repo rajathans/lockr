@@ -43,14 +43,6 @@ Then, run this script to get the list.
   font-style: normal;
 }
 
-@font-face {
-  font-family: archive;
-  src: url("/fonts/archive/Archive.otf");
-}
-
-html , body {
-  font-family: ubuntu;
-}
 
 [class^="mdi-"],
 [class*="mdi-"] {
@@ -5696,8 +5688,8 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 .navbar.navbar,
 .navbar-default.navbar {
-  background-color: #009688;
-  color: rgba(255, 255, 255, 0.84);
+  background-color: DarkSlateGray;
+  color: #f8f8f8;
 }
 .navbar.navbar .navbar-form .form-control-wrapper input.form-control::-webkit-input-placeholder,
 .navbar-default.navbar .navbar-form .form-control-wrapper input.form-control::-webkit-input-placeholder,
@@ -7291,7 +7283,7 @@ icon-material-blue-grey {
 }
 .modal-content {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-  border-radius: 2px;
+  border-radius: 0px;
   border: none;
 }
 .modal-content .modal-header {

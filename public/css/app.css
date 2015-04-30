@@ -5,15 +5,6 @@
   src: url("/fonts/archive/Archive.otf");
 }
 
-@font-face {
-  font-family: fabada;
-  src: url("/fonts/fabada/Fabada-regular.otf");
-}
-
-html , body {
-  font-family: ubuntu;
-}
-
 
 /* Paste this css to your style sheet file or under head tag */
 /* This only works with JavaScript, 
@@ -2345,12 +2336,13 @@ table th[class*="col-"] {
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 767) {
   .table-responsive {
     margin-left: 10px;
-    background-color:;
+    background-color:white;
   }
 }
 
