@@ -65,7 +65,7 @@
                                                 <p class="text-primary" style="margin-top:-40px;">If you click yes, the file will be deleted from our database permanently.</p>
                                             </div>
                                             <div class="modal-footer" style="margin-top:-20px;">
-                                                <a class="btn btn-flat btn-danger" href="{{ route('deleteentry', [$entry->id]) }}"><i class="mdi-navigation-check"></i>Confirm</a>
+                                                <a data-content="Please wait..." data-toggle="snackbar" data-timeout="3" class="btn btn-flat btn-danger" href="{{ route('deleteentry', [$entry->id]) }}"><i class="mdi-navigation-check"></i>Confirm</a>
                                             </div>
                                         </div>
                                     </div>
