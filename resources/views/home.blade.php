@@ -34,7 +34,7 @@
                     <tbody class="searchable" >
                     @foreach ($files as $entry)
                         <tr>
-                            <td><b>{{ $entry->original_filename }}</b></td>
+                            <td style="margin-top:15px;" class="btn-group-justified"><b>{{ $entry->original_filename }}</b></td>
                             <td>
                                 <a href="#myDetailsModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-primary btn-group btn-group-justified btn-flat">Details</a>
                                 <!-- Modal HTML -->

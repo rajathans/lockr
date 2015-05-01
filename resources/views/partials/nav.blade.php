@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand-centered" href="/" style="color:IndianRed; text-decoration:none; font-family:archive; font-weight:bold; font-size:26px; top:20%;">Lock<span style="color:white;">R</span></a>
+				<a class="navbar-brand navbar-brand-centered" href="/" style="color:IndianRed; text-decoration:none; font-family:archive; font-weight:bold; font-size:26px;">Lock<span style="color:white;">R</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,7 +28,6 @@
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/profile">Profile</b></a></li>
 								<li><a href="/privacy">Privacy</b></a></li>
-								<li class="divider"></li>
 								<li><a style="color:IndianRed;" href="/auth/logout"><b>Logout</b></a></li>
 							</ul>
 						</li>

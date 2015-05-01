@@ -2170,11 +2170,11 @@ th {
 .table > tfoot > tr > td {
   padding: 0px;
   line-height: 1;
-  vertical-align: inherit;
+  vertical-align: middle;
   border-top: 0px solid #dddddd;
 }
 .table > thead > tr > th {
-  vertical-align: inherit;
+  vertical-align: middle;
   border-bottom: 0px solid #dddddd;
 }
 .table > caption + thead > tr:first-child > th,
