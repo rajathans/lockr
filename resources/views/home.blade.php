@@ -19,13 +19,12 @@
                                                     <input type="submit" value="Save" data-content="Please wait..." data-toggle="snackbar" data-timeout="3" style="margin-left:30px; margin-top:-10px;" class="btn btn-default btn-primary">
                                                 </form>
                                                 <p style="color:DarkSlateGray; margin-top:5px;">Consider changing the name of the file to give it meaning or upload file with a meaningful name,</p>
-                                                <p style="color:DarkSlateGray; font-weight:bold; margin-top:-10px;">All document extension are supported.</p> 
+                                                <p style="color:DarkSlateGray; font-weight:bold; margin-top:-10px;">All document extensions are supported.</p> 
                                             </div>
                                         </div>
                                     </div>
                         </div>
-                    <h5 align="center"><b>Search for files accodring to name, type etc.</b></h5>
-                    <input id="filter" type="text" class="form-control floating-label" placeholder="Search files...">
+                    <input id="filter" type="text" class="form-control floating-label" placeholder="Search files with name or extension...">
                     <br>
             </ul>
         </div>
@@ -34,10 +33,11 @@
                     <tbody class="searchable" >
                     @foreach ($files as $entry)
                         <tr>
-                            <td style="margin-top:15px;" class="btn-group-justified"><b>{{ $entry->original_filename }}</b></td>
+                            <td style="margin-top:15px;"><b>{{ $entry->original_filename }}</b></td>
                             <td>
                                 <a href="#myDetailsModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-primary btn-group btn-group-justified btn-flat">Details</a>
-                                <!-- Modal HTML -->
+
+                                <!-- Modal for file details -->
                                 <div id="myDetailsModal_{{ $entry->id }}" class="modal fade"> <!-- asked this mymodal_{{ $entry->id }} thing on stackoverflow-->
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -52,16 +52,21 @@
                                                 <p style=""><b>Mime type :</b> {{ $entry->mime }}</p>
                                                 <p style=""><b>Uploaded on :</b> {{ $entry->created_at }}</p>
                                                 <p style=""><b>Permissions :</b> {{ $entry->permissions }}</p>
+                                                @if ($entry->sharedwith)
+                                                    <p style=""><b>Shared with :</b> {{ $entry->permissions }}</p>
+                                                @endif
+
                                             </div>
                                             <div class="modal-footer">
                                                 <a href="{{ route('getentry', [$entry->filename]) }}" style="margin-bottom:0px;" class="btn btn-flat btn-primary">View</a>
+                                                <a href="#myShareModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-flat btn-info">Share</a>
                                                 <a href="#myViewModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-flat btn-danger">Delete</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                 
-                                <!-- Modal HTML -->
+                                <!-- Modal for file delete -->
                                 <div id="myViewModal_{{ $entry->id }}" class="modal fade"> <!-- asked this mymodal_{{ $entry->id }} thing on stackoverflow-->
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -75,6 +80,27 @@
                                             </div>
                                             <div class="modal-footer" style="margin-top:-20px;">
                                                 <a data-content="Please wait..." data-toggle="snackbar" data-timeout="3" class="btn btn-flat btn-danger" href="{{ route('deleteentry', [$entry->id]) }}">Confirm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--modal to share file-->
+                                <div id="myShareModal_{{ $entry->id }}" class="modal fade"> <!-- asked this mymodal_{{ $entry->id }} thing on stackoverflow-->
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Share {{ $entry->original_filename }}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form method="POST" action="/fileentry/share" role="form" class="form-horizontal">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <br>
+                                                    <input class="form-control floating-label" placeholder="Enter roll number of person to share this file with" name="sharedrollno" type="text" value="">
+                                                    <input type="hidden" name="fileid" value="{{ $entry->id }}">
+                                                    <input class="btn btn-primary btn-flat" type="submit" value="Submit">
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

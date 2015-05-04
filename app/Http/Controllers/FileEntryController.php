@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Fileentry;
 use Request;
 use Auth;
+use Input;
 use App\User;
 use App\Http\Requests;
  
@@ -23,7 +24,7 @@ class FileEntryController extends Controller {
 			$this->middleware('auth');
 		}
 
-	public function index()	{
+	public function home()	{
 
 		$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
 		$files = Fileentry::all()->where('permissions',$currentUser);
@@ -50,27 +51,42 @@ class FileEntryController extends Controller {
 		}
 
 	public function get($filename) {
-		
+
 			$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
-			$file = Storage::disk('local')->get($entry->filename);
-	 
-			return (new Response($file, 200))->header('Content-Type', $entry->mime);
+
+			if ($entry->permissions == Auth::user()->enroll_no) 
+			{
+				$file = Storage::disk('local')->get($entry->filename);
+				return (new Response($file, 200))->header('Content-Type', $entry->mime);
+			}
+			else
+			{
+				return view('errors.404');
+			}
 		}
-
-	public function search($filename) {
-
-		$entries = Fileentry::where('filename', 'like', $filename)->firstOrFail();
-		return view('pages.search',compact('entries'));
-	}
 
 	public function delete($id) {
 
 		$file = Fileentry::find($id);
 		$file->delete();
 		return redirect('home');
-	}
+		}
 
 	public function edit($id) {
-		$file = Fileentry::find($id);		
+
+		$file = Fileentry::find($id);
+
+
+		}
+
+	public function share() {
+
+		//take the fileid and sharedwith roll number and do it
+		$fileid = Input::get('fileid');
+		$rollnumber = Input::get('sharedrollno');
+		
+		//add this file to the sharedwith roll no's files
+		
+
 	}
 }

@@ -1,14 +1,12 @@
 <?php
 
 //home page
-Route::get('/home', 'FileEntryController@index');
-Route::get('/','WelcomeController@welcome');
+Route::get('/home', 'FileEntryController@home');
+Route::get('/','FileEntryController@home');
 Route::get('/profile','PagesController@profile');
 Route::get('/help','PagesController@help');
-Route::get('/privacy', 'PagesController@privacy');
 Route::get('/about', 'PagesController@about');
 Route::get('/upload', 'PagesController@upload');
-//Route::get('/donate', 'PagesController@donate');
 
 /*File handling and related routes*/
 
@@ -21,23 +19,17 @@ Route::post('fileentry/add',[
     'uses' => 'FileEntryController@add'
     ]);
 
+Route::post('fileentry/share','FileEntryController@share');
+
 Route::get('fileentry/delete/{id}', [
 	'as' => 'deleteentry',
 	'uses' => 'FileEntryController@delete'
-	]);
-
-Route::get('fileentry/search/results', [
-	'as' => 'searchentry', 
-	'uses' => 'FileEntryController@search'
 	]);
 
 Route::get('fileentry/edit/{id}', [
 	'as'  => 'editentry',
 	'uses' => 'FileEntryController@edit'
 	]);
-
-/*Notices
-Route::resource('notices','NoticesController');*/
 
 //authentication
 Route::controllers([

@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="/css/material.css" rel="stylesheet">
     <link href="/css/ripples.css" rel="stylesheet">
-	<script src="js/search.js"></script>
-	<script src="js/totop.js"></script>
+	<script src="/js/search.js"></script>
+	<script src="/js/totop.js"></script>
 </head>
 <body style="padding-top:70px; font-family:ubuntu;">
 

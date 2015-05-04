@@ -31,6 +31,7 @@ class PagesController extends Controller {
 	}*/
 
 	public function profile() {
+		$id = Auth::user()->id;
 		$name = Auth::user()->name;
 		$email = Auth::user()->email;
 		$enrollno = Auth::user()->enroll_no;
@@ -58,9 +59,4 @@ class PagesController extends Controller {
 	public function help() {
 		return view('pages.help');
 	}
-
-	public function privacy() {
-		return view('errors.503');
-	}
-	
 }
