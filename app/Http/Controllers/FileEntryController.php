@@ -86,12 +86,18 @@ class FileEntryController extends Controller {
 		//take the fileid and sharedwith roll number and do it
 		$fileid = Input::get('fileid');
 		$rollnumber = Input::get('sharedrollno');
-		
-		$file = Fileentry::find($fileid);
-		$file->sharedwith = $rollnumber;
-		$file->save();
+		$currentUSER = Auth::user()->enroll_no;
 
-		return redirect('home');
+		if ($rollnumber == $currentUSER)
+			return redirect('home');
+		else
+		{	
+			$file = Fileentry::find($fileid);
+			$file->sharedwith = $rollnumber;
+			$file->save();
+
+			return redirect('home');
+		}
 
 	}
 

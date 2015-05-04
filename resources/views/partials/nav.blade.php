@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand navbar-brand-centered" href="/" style="color:salmon; text-decoration:none; font-family:archive; font-weight:bold; font-size:26px;">Lock<span style="color:white;">R</span></a>
+				<a class="navbar-brand navbar-brand-centered" href="/" style="color:salmon; text-decoration:none; font-family:archive; font-weight:bold; font-size:20px;">Lock<span style="color:white;">R</span></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
