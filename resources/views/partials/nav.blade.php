@@ -27,7 +27,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #f8f8f8; background-color:DarkSlateGray;" role="button" aria-expanded="false">Signed in as <b>{{ Auth::user()->name }}</b> <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/profile">Profile</b></a></li>
-								<li><a style="color:IndianRed;" href="/auth/logout"><b>Logout</b></a></li>
+								<li><a style="color:salmon;" href="/auth/logout"><b>Logout</b></a></li>
 							</ul>
 						</li>
 					@endif

@@ -19,8 +19,6 @@ Route::post('fileentry/add',[
     'uses' => 'FileEntryController@add'
     ]);
 
-Route::post('fileentry/share','FileEntryController@share');
-
 Route::get('fileentry/delete/{id}', [
 	'as' => 'deleteentry',
 	'uses' => 'FileEntryController@delete'
@@ -29,6 +27,14 @@ Route::get('fileentry/delete/{id}', [
 Route::get('fileentry/edit/{id}', [
 	'as'  => 'editentry',
 	'uses' => 'FileEntryController@edit'
+	]);
+
+// file sharing routes
+Route::post('fileentry/share','FileEntryController@share');
+
+Route::get('fileentry/remove/{id}', [
+	'as' => 'removeentry',
+	'uses' => 'FileEntryController@remove'
 	]);
 
 //authentication

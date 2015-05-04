@@ -27,10 +27,12 @@ class FileEntryController extends Controller {
 	public function home()	{
 
 		$currentUser = Auth::user()->enroll_no;  // store the id of the current user in currentUser
-		$files = Fileentry::all()->where('permissions',$currentUser);
+		$myfiles = Fileentry::all()->where('permissions',$currentUser);
+		$sharedfiles = Fileentry::all()->where('sharedwith',$currentUser);
 		return view('home',compact(
 			'currentUser',
-			'files'
+			'sharedfiles',
+			'myfiles'
 		));
 		}
 	 
@@ -54,7 +56,7 @@ class FileEntryController extends Controller {
 
 			$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
 
-			if ($entry->permissions == Auth::user()->enroll_no) 
+			if ($entry->permissions == Auth::user()->enroll_no || $entry->sharedwith == Auth::user()->enroll_no) 
 			{
 				$file = Storage::disk('local')->get($entry->filename);
 				return (new Response($file, 200))->header('Content-Type', $entry->mime);
@@ -85,8 +87,20 @@ class FileEntryController extends Controller {
 		$fileid = Input::get('fileid');
 		$rollnumber = Input::get('sharedrollno');
 		
-		//add this file to the sharedwith roll no's files
-		
+		$file = Fileentry::find($fileid);
+		$file->sharedwith = $rollnumber;
+		$file->save();
 
+		return redirect('home');
+
+	}
+
+	public function remove($id) {
+
+		$file = Fileentry::find($id);
+		$file->sharedwith = 0;
+		$file->save();
+
+		return redirect('home');
 	}
 }
