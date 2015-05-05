@@ -46,6 +46,7 @@
                                                 <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">{{ $entry->original_filename }}</h4>
                                             </div>
                                             <div class="modal-body">
+                                                <br>
                                                 <p style=""><b>ID :</b> {{ $entry->id }}</p>
                                                 <p style=""><b>File name :</b><a href="{{ route('getentry', [$entry->filename]) }}"><b> {{ $entry->filename }} </b></a>(Click to view)</p>
                                                 <p style=""><b>Original filename :</b> {{ $entry->original_filename }}</p>
@@ -81,6 +82,7 @@
                                                 <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Confirmation</h4>
                                             </div>
                                             <div class="modal-body">
+                                                <br>
                                                 <p>Do you want to delete the file {{ $entry->original_filename }} permanently?</p>
                                                 <p class="text-primary" style="">If you click yes, the file will be deleted from our database permanently.</p>
                                             </div>
@@ -129,6 +131,7 @@
                                                 <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">{{ $entry->original_filename }}</h4>
                                             </div>
                                             <div class="modal-body">
+                                                <br>
                                                 <p style=""><b>ID :</b> {{ $entry->id }}</p>
                                                 <p style=""><b>File name :</b><a href="{{ route('getentry', [$entry->filename]) }}"><b> {{ $entry->filename }} </b></a>(Click to view)</p>
                                                 <p style=""><b>Original filename :</b> {{ $entry->original_filename }}</p>
@@ -158,6 +161,7 @@
                                                 <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Confirmation</h4>
                                             </div>
                                             <div class="modal-body">
+                                                <br>
                                                 <p>Do you want to delete the file {{ $entry->original_filename }} permanently?</p>
                                                 <p class="text-primary" style="">If you click yes, the file will be deleted from our database permanently.</p>
                                             </div>
@@ -177,6 +181,7 @@
                                                 <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Share {{ $entry->original_filename }}</h4>
                                             </div>
                                             <div class="modal-body">
+                                                <br>
                                                 <form method="POST" action="/fileentry/share" role="form" class="form-horizontal">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                     <br>

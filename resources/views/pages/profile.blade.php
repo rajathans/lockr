@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-	<div class="col-md-6 jumbotron">
+	<div class="col-md-6 shadow-z-1" style="background-color:white;">
     	<h5><b>Name</b> 		: {{ $name }}</h5>
     	<h5><b>Roll no</b> 	: {{ $enrollno }}</h5>
     	<h5><b>Course</b> 	: {{ $course }}</h5>
