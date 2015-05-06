@@ -128,7 +128,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">{{ $entry->original_filename }}</h4>
+                                                <h4 class="modal-title" style="color:salmon; font-weight:bold;">{{ $entry->original_filename }}</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <br>
@@ -145,7 +145,12 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <a href="{{ route('getentry', [$entry->filename]) }}" style="margin-bottom:0px;" class="btn btn-flat btn-primary">View</a>
-                                                <a href="#myShareModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-flat btn-info">Share</a>
+                                                @if(!($entry->sharedwith))
+                                                    <a href="#myShareModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-flat btn-info">Share</a>
+                                                @endif
+                                                @if($entry->sharedwith)
+                                                    <a href="{{ route('removeentry', [$entry->id]) }}" class="btn btn-flat btn-primary" data-content="File unshared" data-toggle="snackbar" data-timeout="1">Unshare</a>
+                                                @endif
                                                 <a href="#myViewModal_{{ $entry->id }}" data-toggle="modal" class="btn btn-flat btn-danger">Delete</a>
                                             </div>
                                         </div>
@@ -158,7 +163,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Confirmation</h4>
+                                                <h4 class="modal-title" style="color:salmon; font-weight:bold;">Confirmation</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <br>
@@ -178,16 +183,16 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                <h4 class="modal-title" style="color:IndianRed; font-weight:bold;">Share {{ $entry->original_filename }}</h4>
+                                                <h4 class="modal-title" style="color:salmon; font-weight:bold;">Share {{ $entry->original_filename }}</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <br>
                                                 <form method="POST" action="/fileentry/share" role="form" class="form-horizontal">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                     <br>
-                                                    <input class="form-control floating-label" placeholder="Enter roll number of person to share this file with" name="sharedrollno" type="text" value="">
+                                                    <input class="form-control floating-label" placeholder="Enter roll number of person you want to share this file with" name="sharedrollno" type="text" value="">
                                                     <input type="hidden" name="fileid" value="{{ $entry->id }}">
-                                                    <input class="btn btn-primary btn-flat" type="submit" data-content="File shared" data-toggle="snackbar" data-timeout="1"  value="Submit">
+                                                    <input class="btn btn-primary btn-flat" type="submit" value="Submit">
                                                 </form>
                                             </div>
                                         </div>

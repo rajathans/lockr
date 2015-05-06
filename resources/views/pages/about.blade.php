@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-	<div class="col-md-8 shadow-z-1"  style="background-color:white;">
+	<div class="col-md-13 jumbotron">
 		<h5>In November 2014 the Maharashtra government launched a new Aadhar­-linked facility. 
 		Maharashtra government developed an online repository for important documents like 
 		certificates, degrees, etc which are frequently required to apply for any job and other 
@@ -27,8 +27,6 @@
 		those related to birth, passport and educational qualifications.
 		This web application aims to do just that to help the students and end the hassle of
 		carrying all documents physically. </h5>
-	</div>
-	<div class="col-md-4 shadow-z-1" style="background-color:white;">
 		<h5>
 			Lockr is primarily developed using the Laravel PHP framework.
 			Technologies used in development of this web application are as follows:<br>

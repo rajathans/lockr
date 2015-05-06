@@ -59,4 +59,8 @@ class PagesController extends Controller {
 	public function help() {
 		return view('pages.help');
 	}
+
+	public function future() {
+		return view('pages.future');
+	}
 }

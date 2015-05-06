@@ -7,7 +7,7 @@
           src: url("fonts/archive/Archive.otf");
       }
       body {
-  background: DarkSlateGray;
+  background: teal;
   color: white;
   text-align: center;
 }
@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 80px;
   font-family: archive;
-  color:IndianRed;
+  color:salmon;
 }
 h4 {
   font-size: 18px;
@@ -36,7 +36,7 @@ h4 {
   filter: url("#shadowed-goo");
 }
 .menu-item, .menu-open-button {
-  background: IndianRed;
+  background: teal;
   border-radius: 100%;
   width: 80px;
   height: 80px;
@@ -95,7 +95,7 @@ h4 {
   text-align: left;
 }
 .menu-item:hover {
-  background: crimson;
+  background: ;
   color: white;
 }
 .menu-item:nth-child(3) {

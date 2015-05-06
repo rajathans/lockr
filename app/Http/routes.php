@@ -2,11 +2,12 @@
 
 //home page
 Route::get('/home', 'FileEntryController@home');
-Route::get('/','FileEntryController@home');
+Route::get('/','WelcomeController@welcome');
 Route::get('/profile','PagesController@profile');
 Route::get('/help','PagesController@help');
 Route::get('/about', 'PagesController@about');
 Route::get('/upload', 'PagesController@upload');
+Route::get('/future', 'PagesController@future');
 
 /*File handling and related routes*/
 
